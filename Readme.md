@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Потёмкин](https://up.htmlacademy.ru/adaptive/15/user/651491).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
