@@ -6,8 +6,8 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "gulp": "3.9.1",
+    "gulp-html-beautify": "1.0.1",
     "gulp-twig": "1.2.0",
-    "gulp-watch": "^5.0.1",
     "stylelint": "9.5.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },

@@ -1,0 +1,15 @@
+{% block content %}
+<div class="product">
+  <img class="product__image" src="http://placehold.it/150x100" alt="{{ productName }}">
+  <div class="product__info-container">
+    <div class="product__description">
+      <h3 class="product__name">{{ name }}</h3>
+      <p class="product__parameters">{{ parameters }}</p>
+    </div>
+    <div class="product__about-order">
+      <span class="product__price">{{ price }} руб.</span>
+      <button class="product__add-basket-button" type="button"></button>
+    </div>
+  </div>
+</div>
+{% endblock %}
