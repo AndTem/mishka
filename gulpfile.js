@@ -11,8 +11,30 @@ var server = require("browser-sync").create();
 
 const htmlbeautifyOptions = { indent_size: 2 };
 
-gulp.task("css", function () {
-  return gulp.src("source/less/style.less")
+gulp.task("main-css", function () {
+  return gulp.src("source/less/pages/index.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("catalog-css", function () {
+  return gulp.src("source/less/pages/catalog.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("form-css", function () {
+  return gulp.src("source/less/pages/form.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -40,6 +62,14 @@ gulp.task("form-template", () => gulp.src('./source/pages/form.html')
   .pipe(gulp.dest('./source'))
 );
 
+gulp.task('watch-templates', () => {
+  gulp.watch('./source/**/*.html', [
+    'main-template',
+    'catalog-template',
+    'form-template'
+  ]);
+});
+
 gulp.task("server", function () {
   server.init({
     server: "source/",
@@ -49,9 +79,9 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/**/*.html", gulp.parallel("main-template", "catalog-template", "form-template"));
+  gulp.watch(["source/less/**/*.less", "source/blocks/**/*.less"], gulp.series("main-css", "catalog-css", "form-css"));
+  gulp.watch(["source/blocks/**/*.html", "source/pages/*.html"], gulp.series("main-template", "catalog-template", "form-template"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series("server"));

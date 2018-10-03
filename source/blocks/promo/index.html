@@ -1,21 +1,27 @@
+{% set promoProducts = [
+    {
+      mod: 'light',
+      srcImage: '../../img/icon-interior.svg',
+      description: 'Предметы интерьера'
+    },
+    {
+      mod: 'dark',
+      srcImage: '../../img/icon-toy.svg',
+      description: 'Детские игрушки'
+    }
+  ]
+%}
 {% block content %}
 <section class="{{ className }} promo">
   <h1 class="promo__title">Милые штучки ручной работы</h2>
-  <a class="promo__product promo-product promo-product--light default-link" href="#">
-    <h3 class="promo-product__description">Предметы интерьера</h3>
-    <img
-      class="promo-product__image"
-      src="http://placehold.it/150x100"
-      alt="Предметы интерьера"
-    >
-  </a>
-  <a class="promo__product promo-product promo-product--dark default-link" href="#">
-    <h3 class="promo-product__description">Детские игрушки</h3>
-    <img
-      class="promo-product__image"
-      src="http://placehold.it/150x100"
-      alt="Детские игрушки"
-    >
-  </a>
+  {% for promoProduct in promoProducts %}
+    {% include '../promoProduct/index.html' with {
+        class: 'promo__product',
+        mod: promoProduct.mod,
+        description: promoProduct.description,
+        srcImage: promoProduct.srcImage
+      }
+    %}
+  {% endfor %}
 </section>
 {% endblock %}

@@ -1,0 +1,22 @@
+@promo-product-description-color: @white;
+
+.promo-product {
+  .block-link();
+
+  padding-left: 29px;
+
+  &--light {
+    background-color: @green--light;
+  }
+
+  &--dark {
+    background-color: @green--dark;
+  }
+}
+
+.promo-product__description {
+  .title();
+  .link();
+
+  color: @promo-product-description-color;
+}
