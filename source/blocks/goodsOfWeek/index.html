@@ -1,5 +1,5 @@
 {% block content %}
-<section class="goods-of-week">
+<section class="{{ class }} goods-of-week">
   <header class="goods-of-week__header">
     <h2 class="goods-of-week__product-name">Вязаные корзинки</h2>
     <span class="goods-of-week__title">товар недели</span>
@@ -23,7 +23,7 @@
   </ul>
   <img class="goods-of-week__product-image" src="http://placehold.it/150x100" alt="Вязаные корзинки">
   <span class="goods-of-week__price">Цена: 990 руб.</span>
-  <button class="goods-of-week__to-order-button button-base" type="button">
+  <a class="goods-of-week__to-order-button button-base" href="#" onclick="console.log('Заказано')">
     Заказать
   </button>
 </section>

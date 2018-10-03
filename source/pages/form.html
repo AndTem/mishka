@@ -6,15 +6,15 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../pageHeader/index.html' %}
+    {% include '../blocks/pageHeader/index.html' %}
     <main class="page-order">
-      {% include '../sectionName/index.html' with { class: 'page-order__section-name', name: 'Вязание на заказ' } %}
+      {% include '../blocks/sectionName/index.html' with { class: 'page-order__section-name', name: 'Вязание на заказ' } %}
       <p class="page-order__description">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа
         и мы свяжемся с вами, чтобы уточнить детали.
       </p>
-      {% include '../orderForm/index.html' with { class: 'page-order__form' } %}
+      {% include '../blocks/orderForm/index.html' with { class: 'page-order__form' } %}
     </main>
-    {% include '../pageFooter/index.html' %}
+    {% include '../blocks/pageFooter/index.html' %}
   </body>
 </html>

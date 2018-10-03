@@ -1,9 +1,9 @@
 {% block content %}
 <div class="product">
-  <img class="product__image" src="http://placehold.it/150x100" alt="{{ productName }}">
+  <a class="product__image" href="{{ link }}" alt="{{ productName }}">
   <div class="product__info-container">
     <div class="product__description">
-      <h3 class="product__name">{{ name }}</h3>
+      <a class="product__name" href="{{ link }}">{{ name }}</h3>
       <p class="product__parameters">{{ parameters }}</p>
     </div>
     <div class="product__about-order">

@@ -7,70 +7,75 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__logo" src="http://placehold.it/150x100" alt="Мишка">
-      <button class="page-header__menu-button header-menu-button" type="button">
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
+      <a class="page-header__logo" href="/index.html">Мишка</a>
+      <button class="page-header__menu-button hamburger-button" type="button" onclick="">
+        <span class="hamburger-button__item"></span>
+        <span class="hamburger-button__item"></span>
+        <span class="hamburger-button__item"></span>
       </button>
     </header>
     <main class="page-catalog">
       <div class="page-catalog__section-name section-name">
         <span class="section-name__title">Каталог товаров</span>
       </div>
-      <section class="page-catalog__catalog">
-        <div class="product">
-          <img class="product__image" src="http://placehold.it/150x100" alt="">
-          <div class="product__info-container">
-            <div class="product__description">
-              <h3 class="product__name">Зайчик-попрыгайчик</h3>
-              <p class="product__parameters">Рост 30 см, вес 200 г</p>
-            </div>
-            <div class="product__about-order">
-              <span class="product__price">1 200 руб.</span>
-              <button class="product__add-basket-button" type="button"></button>
-            </div>
+      <ul class="page-catalog__catalog-list">
+        <li class="page-catalog__catalog-item">
+          <div class="product">
+            <a class="product__image" href="#" alt="">
+              <div class="product__info-container">
+                <div class="product__description">
+                  <a class="product__name" href="#">Зайчик-попрыгайчик</h3>
+                    <p class="product__parameters">Рост 30 см, вес 200 г</p>
+                </div>
+                <div class="product__about-order">
+                  <span class="product__price">1 200 руб.</span>
+                  <button class="product__add-basket-button" type="button"></button>
+                </div>
+              </div>
           </div>
+        </li>
+        <li class="page-catalog__catalog-item">
+          <div class="product">
+            <a class="product__image" href="#" alt="">
+              <div class="product__info-container">
+                <div class="product__description">
+                  <a class="product__name" href="#">Корзинка для белья</h3>
+                    <p class="product__parameters">Диаметр 15 см, высота 10 см</p>
+                </div>
+                <div class="product__about-order">
+                  <span class="product__price">690 руб.</span>
+                  <button class="product__add-basket-button" type="button"></button>
+                </div>
+              </div>
+          </div>
+        </li>
+        <li class="page-catalog__catalog-item">
+          <div class="product">
+            <a class="product__image" href="#" alt="">
+              <div class="product__info-container">
+                <div class="product__description">
+                  <a class="product__name" href="#">Большая корзинка для игрушек</h3>
+                    <p class="product__parameters">Диаметр 30 см, высота 30 см</p>
+                </div>
+                <div class="product__about-order">
+                  <span class="product__price">1 500 руб.</span>
+                  <button class="product__add-basket-button" type="button"></button>
+                </div>
+              </div>
+          </div>
+        </li>
+      </ul>
+      <article class="page-catalog__product-proccess production-process">
+        <h2 class="production-process__title">Процесс производства</h2>
+        <video class="production-process__video" src="http://placehold.it/150x100"></video>
+        <div class="production-process__content">
+          <p class="production-process__description">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+            появляются наши товары.
+          </p>
+          <a class="production-process__to-order-button button-base" href="#">сделать заказ</a>
         </div>
-        <div class="product">
-          <img class="product__image" src="http://placehold.it/150x100" alt="">
-          <div class="product__info-container">
-            <div class="product__description">
-              <h3 class="product__name">Корзинка для белья</h3>
-              <p class="product__parameters">Диаметр 15 см, высота 10 см</p>
-            </div>
-            <div class="product__about-order">
-              <span class="product__price">690 руб.</span>
-              <button class="product__add-basket-button" type="button"></button>
-            </div>
-          </div>
-        </div>
-        <div class="product">
-          <img class="product__image" src="http://placehold.it/150x100" alt="">
-          <div class="product__info-container">
-            <div class="product__description">
-              <h3 class="product__name">Большая корзинка для игрушек</h3>
-              <p class="product__parameters">Диаметр 30 см, высота 30 см</p>
-            </div>
-            <div class="product__about-order">
-              <span class="product__price">1 500 руб.</span>
-              <button class="product__add-basket-button" type="button"></button>
-            </div>
-          </div>
-        </div>
-        <article class="production-process">
-          <h2 class="production-process__title">Процесс производства</h2>
-          <video class="production-process__video" src="http://placehold.it/150x100"></video>
-          <div class="production-process__content">
-            <p class="production-process__description">
-              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-              появляются наши товары.
-            </p>
-            <a class="production-process__to-order-button button-base" href="#">сделать заказ</a>
-          </div>
-        </article>
-      </section>
+      </article>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

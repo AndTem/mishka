@@ -6,16 +6,14 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../pageHeader/index.html' %}
+    {% include '../blocks/pageHeader/index.html' %}
     <main class="page-main">
-      {% include '../promo/index.html' %}
-      {% include '../goodsOfWeek/index.html' %}
-      {% include '../zigzagLine/index.html' %}
-      {% include '../aboutUs/index.html' %}
-      {% include '../reviews/index.html' %}
-      {% include '../zigzagLine/index.html' %}
-      {% include '../contacts/index.html' %}
+      {% include '../blocks/promo/index.html' with { class: 'page-main__section' } %}
+      {% include '../blocks/goodsOfWeek/index.html' with { class: 'page-main__section page-main__section--decoration-underscore' } %}
+      {% include '../blocks/aboutUs/index.html' with { class: 'page-main__section' } %}
+      {% include '../blocks/reviews/index.html' with { class: 'page-main__section page-main__section--decoration-underscore' } %}
+      {% include '../blocks/contacts/index.html' with { class: 'page-main__section' } %}
     </main>
-    {% include '../pageFooter/index.html' %}
+    {% include '../blocks/pageFooter/index.html' %}
   </body>
 </html>

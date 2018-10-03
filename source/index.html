@@ -7,16 +7,15 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__logo" src="http://placehold.it/150x100" alt="Мишка">
-      <button class="page-header__menu-button header-menu-button" type="button">
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
+      <a class="page-header__logo" href="/index.html">Мишка</a>
+      <button class="page-header__menu-button hamburger-button" type="button" onclick="">
+        <span class="hamburger-button__item"></span>
+        <span class="hamburger-button__item"></span>
+        <span class="hamburger-button__item"></span>
       </button>
     </header>
     <main class="page-main">
-      <section class="promo ">
+      <section class=" promo">
         <h1 class="promo__title">Милые штучки ручной работы</h2>
           <a class="promo__product promo-product promo-product--light default-link" href="#">
             <h3 class="promo-product__description">Предметы интерьера</h3>
@@ -27,7 +26,7 @@
             <img class="promo-product__image" src="http://placehold.it/150x100" alt="Детские игрушки">
           </a>
       </section>
-      <section class="goods-of-week">
+      <section class="page-main__section page-main__section--decoration-underscore goods-of-week">
         <header class="goods-of-week__header">
           <h2 class="goods-of-week__product-name">Вязаные корзинки</h2>
           <span class="goods-of-week__title">товар недели</span>
@@ -51,51 +50,52 @@
         </ul>
         <img class="goods-of-week__product-image" src="http://placehold.it/150x100" alt="Вязаные корзинки">
         <span class="goods-of-week__price">Цена: 990 руб.</span>
-        <button class="goods-of-week__to-order-button button-base" type="button">
+        <a class="goods-of-week__to-order-button button-base" href="#" onclick="console.log('Заказано')">
           Заказать
-        </button>
+          </button>
       </section>
-      <div class="zizag-line"></div>
-      <section class="about-us">
+      <section class="page-main__section about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>
-        <article class="about-us__advantages about-us-advantages">
-          <img class="about-us-advantages__image" src="http://placehold.it/150x100" alt="Цветок">
-          <p class="about-us-advantages__description">
-            Экологически чистые материалы
-          </p>
-        </article>
-        <article class="about-us__advantages about-us-advantages">
-          <img class="about-us-advantages__image" src="http://placehold.it/150x100" alt="Купюра">
-          <p class="about-us-advantages__description">
-            Скандинавский стиль по российской цене
-          </p>
-        </article>
-        <article class="about-us__advantages about-us-advantages">
-          <img class="about-us-advantages__image" src="http://placehold.it/150x100" alt="Лайк">
-          <p class="about-us-advantages__description">
-            Увеличивает лайки на фотографиях
-          </p>
-        </article>
-        <article class="about-us__advantages about-us-advantages">
-          <img class="about-us-advantages__image" src="http://placehold.it/150x100" alt="Вязаный клубок">
-          <p class="about-us-advantages__description">
-            Связано вручную с любовью и умилением
-          </p>
-        </article>
-        <article class="about-us__advantages about-us-advantages">
-          <img class="about-us-advantages__image" src="http://placehold.it/150x100" alt="Ракета">
-          <p class="about-us-advantages__description">
-            Поддержка отечественного производителя
-          </p>
-        </article>
-        <article class="about-us__advantages about-us-advantages">
-          <img class="about-us-advantages__image" src="http://placehold.it/150x100" alt="Подарок">
-          <p class="about-us-advantages__description">
-            Поставляется в подарочной упаковке
-          </p>
-        </article>
+        <ul class="about-us__advantages advantages">
+          <li class="advantages__item">
+            <img class="advantages__image" src="http://placehold.it/150x100" alt="Цветок">
+            <p class="advantages__description">
+              Экологически чистые материалы
+            </p>
+          </li>
+          <li class="advantages__item">
+            <img class="advantages__image" src="http://placehold.it/150x100" alt="Купюра">
+            <p class="advantages__description">
+              Скандинавский стиль по российской цене
+            </p>
+          </li>
+          <li class="advantages__item">
+            <img class="advantages__image" src="http://placehold.it/150x100" alt="Лайк">
+            <p class="advantages__description">
+              Увеличивает лайки на фотографиях
+            </p>
+          </li>
+          <li class="advantages__item">
+            <img class="advantages__image" src="http://placehold.it/150x100" alt="Вязаный клубок">
+            <p class="advantages__description">
+              Связано вручную с любовью и умилением
+            </p>
+          </li>
+          <li class="advantages__item">
+            <img class="advantages__image" src="http://placehold.it/150x100" alt="Ракета">
+            <p class="advantages__description">
+              Поддержка отечественного производителя
+            </p>
+          </li>
+          <li class="advantages__item">
+            <img class="advantages__image" src="http://placehold.it/150x100" alt="Подарок">
+            <p class="advantages__description">
+              Поставляется в подарочной упаковке
+            </p>
+          </li>
+        </ul>
       </section>
-      <section class="reviews">
+      <section class="page-main__section page-main__section--decoration-underscore reviews">
         <h2 class="reviews__title">Отзывы</h2>
         <article class="reviews__content-container">
           <p class="reviews__content-text">
@@ -114,14 +114,13 @@
         </div>
         <a class="button-base default-link" href="#">Написать</a>
       </section>
-      <div class="zizag-line"></div>
-      <section class="contacts">
+      <section class="page-main__section contacts">
         <h2 class="contacts__title">Контакты</h2>
         <div class="contacts__info contact-info">
           <span class="contact-info__title">e-mail:</span>
           <a class="contact-info__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </div>
-        <div class="contacts__info">
+        <div class="contacts__info contact-info">
           <span class="contact-info__title">адрес:</span>
           <address class="contact-info__address">
             г. Санкт-Петербург,

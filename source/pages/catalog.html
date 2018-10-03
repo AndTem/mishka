@@ -1,15 +1,18 @@
 {% set products = [
     {
+      link: '#',
       name: 'Зайчик-попрыгайчик',
       parameters: 'Рост 30 см, вес 200 г',
       price: '1 200'
     },
     {
+      link: '#',
       name: 'Корзинка для белья',
       parameters: 'Диаметр 15 см, высота 10 см',
       price: '690'
     },
     {
+      link: '#',
       name: 'Большая корзинка для игрушек',
       parameters: 'Диаметр 30 см, высота 30 см',
       price: '1 500'
@@ -25,21 +28,24 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../pageHeader/index.html' %}
+    {% include '../blocks/pageHeader/index.html' %}
     <main class="page-catalog">
-      {% include '../sectionName/index.html' with { class: 'page-catalog__section-name', name: 'Каталог товаров' } %}
-      <section class="page-catalog__catalog">
+      {% include '../blocks/sectionName/index.html' with { class: 'page-catalog__section-name', name: 'Каталог товаров' } %}
+      <ul class="page-catalog__catalog-list">
         {% for product in products %}
-          {% include '../product/index.html' with {
-              name: product.name,
-              parameters: product.parameters,
-              price: product.price
-            }
-          %}
+          <li class="page-catalog__catalog-item">
+            {% include '../blocks/product/index.html' with {
+                link: product.link,
+                name: product.name,
+                parameters: product.parameters,
+                price: product.price
+              }
+            %}
+          </li>
         {% endfor %}
-        {% include '../productionProcess/index.html' %}
-      </section>
+      </ul>
+      {% include '../blocks/productionProcess/index.html' with { className: 'page-catalog__product-proccess' } %}
     </main>
-    {% include '../pageFooter/index.html' %}
+    {% include '../blocks/pageFooter/index.html' %}
   </body>
 </html>

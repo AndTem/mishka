@@ -1,0 +1,39 @@
+{% set advantages = [
+    {
+      imageSrc: 'http://placehold.it/150x100',
+      imageAlt: 'Цветок',
+      description: 'Экологически чистые материалы'
+    },
+    {
+      imageSrc: 'http://placehold.it/150x100',
+      imageAlt: 'Купюра',
+      description: 'Скандинавский стиль по российской цене'
+    },
+    {
+      imageSrc: 'http://placehold.it/150x100',
+      imageAlt: 'Лайк',
+      description: 'Увеличивает лайки на фотографиях'
+    },
+    {
+      imageSrc: 'http://placehold.it/150x100',
+      imageAlt: 'Вязаный клубок',
+      description: 'Связано вручную с любовью и умилением'
+    },
+    {
+      imageSrc: 'http://placehold.it/150x100',
+      imageAlt: 'Ракета',
+      description: 'Поддержка отечественного производителя'
+    },
+    {
+      imageSrc: 'http://placehold.it/150x100',
+      imageAlt: 'Подарок',
+      description: 'Поставляется в подарочной упаковке'
+    }
+  ]
+%}
+{% block content %}
+<section class="{{ class }} about-us">
+  <h2 class="about-us__title">Коротко о нас:</h2>
+  {% include '../advantages/index.html' with { advantages: advantages, className: 'about-us__advantages' } %}
+</section>
+{% endblock %}

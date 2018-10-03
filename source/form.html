@@ -7,12 +7,11 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="page-header__logo" src="http://placehold.it/150x100" alt="Мишка">
-      <button class="page-header__menu-button header-menu-button" type="button">
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
-        <span class="header-menu-button__item"></span>
+      <a class="page-header__logo" href="/index.html">Мишка</a>
+      <button class="page-header__menu-button hamburger-button" type="button" onclick="">
+        <span class="hamburger-button__item"></span>
+        <span class="hamburger-button__item"></span>
+        <span class="hamburger-button__item"></span>
       </button>
     </header>
     <main class="page-order">
@@ -74,7 +73,7 @@
           </label>
           <label class="order-form__label order-form__label--vertical">
             Отчество:
-            <input class="order-form__text-input" type="text" name="patronymic" placeholder="Отчество, если желаете">
+            <input class="order-form__text-input" type="text" name="surname" placeholder="Отчество, если желаете">
           </label>
         </fieldset>
         <fieldset class="order-form__fieldset">
