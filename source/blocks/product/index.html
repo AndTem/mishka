@@ -1,0 +1,15 @@
+{% block content %}
+<div class="product">
+  <a class="product__image" href="{{ link }}"></a>
+  <div class="product__info-container">
+    <div class="product__description">
+      <a class="product__name" href="{{ link }}">{{ name }}</a>
+      <p class="product__parameters">{{ parameters }}</p>
+    </div>
+    <div class="product__about-order">
+      <span class="product__price">{{ price }} руб.</span>
+      <button class="product__add-basket-button" type="button"></button>
+    </div>
+  </div>
+</div>
+{% endblock %}

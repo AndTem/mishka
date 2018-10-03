@@ -5,13 +5,17 @@
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
+    "gulp": "3.9.1",
+    "gulp-html-beautify": "1.0.1",
+    "gulp-twig": "1.2.0",
     "stylelint": "9.5.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "test": "npm run editorconfig",
+    "watch-templates": "gulp watch-templates"
   },
   "editorconfig-cli": [
     "*.json",

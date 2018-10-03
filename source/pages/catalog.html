@@ -1,0 +1,51 @@
+{% set products = [
+    {
+      link: '#',
+      name: 'Зайчик-попрыгайчик',
+      parameters: 'Рост 30 см, вес 200 г',
+      price: '1 200'
+    },
+    {
+      link: '#',
+      name: 'Корзинка для белья',
+      parameters: 'Диаметр 15 см, высота 10 см',
+      price: '690'
+    },
+    {
+      link: '#',
+      name: 'Большая корзинка для игрушек',
+      parameters: 'Диаметр 30 см, высота 30 см',
+      price: '1 500'
+    }
+  ]
+%}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    {% include '../blocks/pageHeader/index.html' %}
+    <main class="page-catalog">
+      {% include '../blocks/sectionName/index.html' with { class: 'page-catalog__section-name', name: 'Каталог товаров' } %}
+      <ul class="page-catalog__catalog-list">
+        {% for product in products %}
+          <li class="page-catalog__catalog-item">
+            {% include '../blocks/product/index.html' with {
+                link: product.link,
+                name: product.name,
+                parameters: product.parameters,
+                price: product.price
+              }
+            %}
+          </li>
+        {% endfor %}
+      </ul>
+      {% include '../blocks/productionProcess/index.html' with { className: 'page-catalog__product-proccess' } %}
+    </main>
+    {% include '../blocks/pageFooter/index.html' %}
+  </body>
+</html>

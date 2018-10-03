@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    {% include '../blocks/pageHeader/index.html' %}
+    <main class="page-order">
+      {% include '../blocks/sectionName/index.html' with { class: 'page-order__section-name', name: 'Вязание на заказ' } %}
+      <p class="page-order__description">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа
+        и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      {% include '../blocks/orderForm/index.html' with { class: 'page-order__form' } %}
+    </main>
+    {% include '../blocks/pageFooter/index.html' %}
+  </body>
+</html>
