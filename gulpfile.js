@@ -84,4 +84,5 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
+gulp.task("css", gulp.series("main-css", "catalog-css", "form-css"));
 gulp.task("start", gulp.series("server"));
