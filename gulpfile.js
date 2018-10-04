@@ -85,4 +85,5 @@ gulp.task("server", function () {
 });
 
 gulp.task("css", gulp.series("main-css", "catalog-css", "form-css"));
+gulp.task("template", gulp.series("main-template", "catalog-template", "form-template"));
 gulp.task("start", gulp.series("server"));
