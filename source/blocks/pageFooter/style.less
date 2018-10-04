@@ -1,0 +1,42 @@
+@import "../copyright/style";
+
+.page-footer {
+  background-color: @footer-background;
+}
+
+.page-footer__wrapper {
+  padding: 0 @mobile-page-side-padding 0 @mobile-page-side-padding;
+}
+
+.page-footer__social {
+  padding: 25px 62px 28px 57px;
+}
+
+.page-footer__social-button {
+  .block-link();
+
+  &--instagram {
+    width: 15px;
+    height: 28px;
+
+    background-image: url("../../img/icon-insta.svg");
+  }
+
+  &--twitter,
+  &--facebook {
+    width: 23px;
+    height: 20px;
+  }
+
+  &--facebook {
+    background-image: url("../../img/icon-fb.svg");
+  }
+
+  &--twitter {
+    background-image: url("../../img/icon-fb.svg");
+  }
+}
+
+.page-footer__copyright {
+  padding: 22px 40px 23px 40px;
+}

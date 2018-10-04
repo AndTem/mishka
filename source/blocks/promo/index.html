@@ -12,7 +12,7 @@
   ]
 %}
 {% block content %}
-<section class="{{ className }} promo">
+<section class="{{ class }} promo">
   <h1 class="promo__title">Милые штучки ручной работы</h2>
   {% for promoProduct in promoProducts %}
     {% include '../promoProduct/index.html' with {
