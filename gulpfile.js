@@ -11,30 +11,8 @@ var server = require("browser-sync").create();
 
 const htmlbeautifyOptions = { indent_size: 2 };
 
-gulp.task("main-css", function () {
-  return gulp.src("source/less/pages/index.less")
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
-});
-
-gulp.task("catalog-css", function () {
-  return gulp.src("source/less/pages/catalog.less")
-    .pipe(plumber())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
-});
-
-gulp.task("form-css", function () {
-  return gulp.src("source/less/pages/form.less")
+gulp.task("css", function () {
+  return gulp.src("source/less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -79,11 +57,10 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch(["source/less/**/*.less", "source/blocks/**/*.less"], gulp.series("main-css", "catalog-css", "form-css"));
+  gulp.watch(["source/less/**/*.less", "source/blocks/**/*.less"], gulp.series("css"));
   gulp.watch(["source/blocks/**/*.html", "source/pages/*.html"], gulp.series("main-template", "catalog-template", "form-template"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("css", gulp.series("main-css", "catalog-css", "form-css"));
 gulp.task("template", gulp.series("main-template", "catalog-template", "form-template"));
 gulp.task("start", gulp.series("server"));
