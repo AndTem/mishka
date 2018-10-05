@@ -1,3 +1,5 @@
+@goods-of-week-price-font-weight: bold;
+
 .goods-of-week__header {
   margin-bottom: 34px;
 }
@@ -9,6 +11,8 @@
 }
 
 .goods-of-week__title {
+  .title();
+
   text-transform: uppercase;
   color: @green--light;
 }
@@ -41,10 +45,9 @@
 
   text-align: center;
   font-size: 17px;
+  font-weight: @goods-of-week-price-font-weight;
 }
 
 .goods-of-week__to-order-button {
   .block-link();
-
-
 }
