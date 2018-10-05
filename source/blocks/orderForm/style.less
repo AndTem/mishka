@@ -1,0 +1,60 @@
+.order-form__fieldset {
+  margin-bottom: 33px;
+
+  border: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.order-form__legend {
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  color: @form-legend-color;
+  text-transform: uppercase;
+
+  &--single {
+    margin-bottom: 9px;
+  }
+}
+
+.order-form__label {
+  font-size: 17px;
+  color: @form-label-color;
+}
+
+.order-form__text-input {
+  border: none;
+  box-shadow: inset 0 -2px 0 0 @black;
+}
+
+.order-form__text-area {
+  width: 260px;
+  height: 142px;
+  box-sizing: border-box;
+
+  border: solid 2px @black--light;
+
+  resize: none;
+}
+
+.order-form__note {
+  .paragraph();
+
+  margin-bottom: 31px;
+
+  font-size: 14px;
+  line-height: 16px;
+
+  &::before {
+    content: "\2732";
+  }
+}
+
+.order-form__submit-button {
+  width: 100%;
+
+  background: transparent;
+}

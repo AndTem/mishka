@@ -1,18 +1,21 @@
 {% set products = [
     {
       link: '#',
+      srcImage: './img/photo-hare-mobile@1x.jpg',
       name: 'Зайчик-попрыгайчик',
       parameters: 'Рост 30 см, вес 200 г',
       price: '1 200'
     },
     {
       link: '#',
+      srcImage: './img/photo-bowl-mobile@1x.jpg',
       name: 'Корзинка для белья',
       parameters: 'Диаметр 15 см, высота 10 см',
       price: '690'
     },
     {
       link: '#',
+      srcImage: './img/photo-toys-mobile@1x.jpg',
       name: 'Большая корзинка для игрушек',
       parameters: 'Диаметр 30 см, высота 30 см',
       price: '1 500'
@@ -25,26 +28,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./css/style.css" rel="stylesheet">
+
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
     {% include '../blocks/pageHeader/index.html' %}
-    <main class="page-catalog">
-      {% include '../blocks/sectionName/index.html' with { class: 'page-catalog__section-name', name: 'Каталог товаров' } %}
-      <ul class="page-catalog__catalog-list">
-        {% for product in products %}
-          <li class="page-catalog__catalog-item">
-            {% include '../blocks/product/index.html' with {
-                link: product.link,
-                name: product.name,
-                parameters: product.parameters,
-                price: product.price
-              }
-            %}
-          </li>
-        {% endfor %}
-      </ul>
-      {% include '../blocks/productionProcess/index.html' with { className: 'page-catalog__product-proccess' } %}
+    <main class="page page-catalog">
+      {% include '../blocks/sectionName/index.html' with {
+          class: 'page-catalog__section-name page__section page__section-name', name: 'Каталог товаров'
+        }
+      %}
+      <div class="page__wrapper">
+        <ul class="page-catalog__catalog-list page__section">
+          {% for product in products %}
+            <li class="page-catalog__catalog-item">
+              {% include '../blocks/product/index.html' with {
+                  link: product.link,
+                  srcImage: product.srcImage,
+                  name: product.name,
+                  parameters: product.parameters,
+                  price: product.price
+                }
+              %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% include '../blocks/productionProcess/index.html' with {
+            className: 'page-catalog__product-proccess page__section'
+          }
+        %}
+      </div>
     </main>
     {% include '../blocks/pageFooter/index.html' %}
   </body>

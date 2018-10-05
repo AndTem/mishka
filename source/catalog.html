@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="./css/style.css" rel="stylesheet">
+
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
@@ -14,68 +17,76 @@
         <span class="hamburger-button__item"></span>
       </button>
     </header>
-    <main class="page-catalog">
-      <div class="page-catalog__section-name section-name">
+    <main class="page page-catalog">
+      <div class="page-catalog__section-name page__section page__section-name section-name">
         <span class="section-name__title">Каталог товаров</span>
       </div>
-      <ul class="page-catalog__catalog-list">
-        <li class="page-catalog__catalog-item">
-          <div class="product">
-            <a class="product__image" href="#"></a>
+      <div class="page__wrapper">
+        <ul class="page-catalog__catalog-list page__section">
+          <li class="page-catalog__catalog-item">
+            <div class="product">
+              <a class="product__image-container" href="#">
+                <img class="product__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
+              </a>
               <div class="product__info-container">
                 <div class="product__description">
                   <a class="product__name" href="#">Зайчик-попрыгайчик</a>
-                    <p class="product__parameters">Рост 30 см, вес 200 г</p>
+                  <span class="product__parameters">Рост 30 см, вес 200 г</span>
                 </div>
                 <div class="product__about-order">
                   <span class="product__price">1 200 руб.</span>
                   <button class="product__add-basket-button" type="button"></button>
                 </div>
               </div>
-          </div>
-        </li>
-        <li class="page-catalog__catalog-item">
-          <div class="product">
-            <a class="product__image" href="#"></a>
+            </div>
+          </li>
+          <li class="page-catalog__catalog-item">
+            <div class="product">
+              <a class="product__image-container" href="#">
+                <img class="product__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
+              </a>
               <div class="product__info-container">
                 <div class="product__description">
                   <a class="product__name" href="#">Корзинка для белья</a>
-                    <p class="product__parameters">Диаметр 15 см, высота 10 см</p>
+                  <span class="product__parameters">Диаметр 15 см, высота 10 см</span>
                 </div>
                 <div class="product__about-order">
                   <span class="product__price">690 руб.</span>
                   <button class="product__add-basket-button" type="button"></button>
                 </div>
               </div>
-          </div>
-        </li>
-        <li class="page-catalog__catalog-item">
-          <div class="product">
-            <a class="product__image" href="#"></a>
+            </div>
+          </li>
+          <li class="page-catalog__catalog-item">
+            <div class="product">
+              <a class="product__image-container" href="#">
+                <img class="product__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
+              </a>
               <div class="product__info-container">
                 <div class="product__description">
                   <a class="product__name" href="#">Большая корзинка для игрушек</a>
-                    <p class="product__parameters">Диаметр 30 см, высота 30 см</p>
+                  <span class="product__parameters">Диаметр 30 см, высота 30 см</span>
                 </div>
                 <div class="product__about-order">
                   <span class="product__price">1 500 руб.</span>
                   <button class="product__add-basket-button" type="button"></button>
                 </div>
               </div>
+            </div>
+          </li>
+        </ul>
+        <article class="page-catalog__product-proccess page__section production-process">
+          <h2 class="production-process__title">Процесс производства</h2>
+          <video class="production-process__video" src="http://placehold.it/150x100"></video>
+          <div class="production-process__content">
+            <p class="production-process__description">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+              появляются наши товары.
+            </p>
+            <a class="production-process__to-order-button button-base" href="#">сделать заказ</a>
           </div>
-        </li>
-      </ul>
-      <article class="page-catalog__product-proccess production-process">
-        <h2 class="production-process__title">Процесс производства</h2>
-        <video class="production-process__video" src="http://placehold.it/150x100"></video>
-        <div class="production-process__content">
-          <p class="production-process__description">
-            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-            появляются наши товары.
-          </p>
-          <a class="production-process__to-order-button button-base" href="#">сделать заказ</a>
-        </div>
-      </article>
+        </article>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

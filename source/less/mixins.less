@@ -1,0 +1,50 @@
+.default-button() {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.link() {
+  text-decoration: none;
+  color: inherit;
+}
+
+.block-link() {
+  display: block;
+
+  .link();
+}
+
+.list() {
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.paragraph() {
+  margin: 0;
+
+  line-height: @paragraph-line-height;
+}
+
+.title() {
+  margin: 0;
+
+  font-weight: @title-font-weight;
+  color: @main-font-title-color;
+  text-decoration: none;
+}
+
+.main-title() {
+  .title();
+
+  font-size: @main-title-font-size;
+  line-height: @main-title-line-height;
+  text-align: center;
+}
+
+.page-section-title() {
+  .title();
+
+  font-size: @section-page-title-font-size;
+}
