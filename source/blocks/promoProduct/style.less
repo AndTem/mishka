@@ -14,9 +14,20 @@
   }
 }
 
+.promo-product__wrapper {
+  .wrapper(@mobile-width);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .promo-product__description {
   .title();
   .link();
+
+  width: 106px;
+  margin: 30px 0;
 
   color: @promo-product-description-color;
 }

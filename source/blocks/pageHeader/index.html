@@ -1,6 +1,8 @@
 {% block content %}
 <header class="page-header">
-  <a class="page-header__logo" href="/index.html">Мишка</a>
-  {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
+  <div class="page-header__wrapper">
+    <a class="page-header__logo" href="/index.html">Мишка</a>
+    {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
+  </div>
 </header>
 {% endblock %}

@@ -1,9 +1,19 @@
-@import "../hamburgerButton/style";
+@page-header-mobile-height: 79px;
 
 .page-header {
-  padding: 22px 30px;
+  height: @page-header-mobile-height;
 
   box-shadow: 0 1px 0 0 @grey--light, inset 0 1px 0 0 @grey--light;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: @mobile-width;
+  padding: 22px 30px;
+  margin: 0 auto;
 }
 
 .page-header__logo {

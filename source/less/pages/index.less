@@ -1,13 +1,24 @@
+@goods-of-week-underscore-margin-top: 36px;
+@reviews-underscore-margin-top: 45px;
+
 .page-main__promo {
   margin-bottom: 34px;
 }
 
 .page-main__goods-of-week {
-  margin-bottom: 34px;
+  margin-bottom: 76px;
+
+  &::after {
+    .after-underscore-line(@goods-of-week-underscore-margin-top);
+  }
 }
 
 .page-main__reviews {
-  margin-bottom: 44px;
+  margin-bottom: 95px;
+
+  &::after {
+    .after-underscore-line(@reviews-underscore-margin-top);
+  }
 }
 
 .page-main__contacts {

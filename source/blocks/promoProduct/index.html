@@ -1,10 +1,12 @@
 {% block content %}
 <a class="{{ class }} promo-product promo-product--{{ mod }}" href="#">
-  <h3 class="promo-product__description">{{ description }}</h3>
-  <img
-    class="promo-product__image"
-    src="{{ srcImage }}"
-    alt="{{ description }}"
-  >
+  <div class="promo-product__wrapper">
+    <h3 class="promo-product__description">{{ description }}</h3>
+    <img
+      class="promo-product__image"
+      src="{{ srcImage }}"
+      alt="{{ description }}"
+    >
+  </div>
 </a>
 {% endblock %}

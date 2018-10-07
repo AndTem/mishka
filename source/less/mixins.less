@@ -48,3 +48,27 @@
 
   font-size: @section-page-title-font-size;
 }
+
+.wrapper(@width) {
+  width: @width;
+  margin: 0 auto;
+}
+
+.block-full-screen-width() {
+  min-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.after-underscore-line(@margin-top) {
+  .block-full-screen-width();
+
+  content: "";
+  position: absolute;
+
+  height: 6px;
+  margin-top: 36px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+}

@@ -1,11 +1,10 @@
 .page__wrapper {
+  box-sizing: border-box;
+  width: @mobile-width;
   padding: 0 @mobile-page-side-padding 0 @mobile-page-side-padding;
+  margin: 0 auto;
 }
 
 .page__section {
-  &--decoration-underscore {
-    &::after {
-      content: "";
-    }
-  }
+  position: relative;
 }
