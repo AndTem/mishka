@@ -1,4 +1,5 @@
 @page-header-mobile-height: 79px;
+@page-header-tablet-height: 88px;
 
 .page-header {
   height: @page-header-mobile-height;
@@ -7,13 +8,22 @@
 }
 
 .page-header__wrapper {
+  .wrapper(@mobile-width);
+
   display: flex;
   justify-content: center;
 
   box-sizing: border-box;
-  width: @mobile-width;
-  padding: 22px 30px;
-  margin: 0 auto;
+  padding: 22px @mobile-page-side-padding;
+}
+
+.page-header__search-button {
+  display: none;
+
+  width: 82px;
+
+  border-left: 1px solid @grey--light;
+  border-right: 1px solid @grey--light;
 }
 
 .page-header__logo {
@@ -24,4 +34,102 @@
   color: transparent;
 
   background-image: url("../img/logo-mobile.svg");
+  background-size: 100% 100%;
+}
+
+.page-header___cart-info,
+.page-header__catalog-link-container,
+.page-header__form-link-container {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    height: @page-header-tablet-height;
+  }
+
+  .page-header__wrapper {
+    .wrapper(@tablet-width);
+
+    justify-content: flex-start;
+
+    height: 100%;
+    padding: 0 @tablet-page-side-padding;
+  }
+
+  .page-header__logo-container {
+    display: flex;
+    align-items: center;
+
+    width: 321px;
+  }
+
+  .page-header__logo {
+    width: 112px;
+    height: 46px;
+
+    background-image: url("../img/logo-tablet.svg");
+  }
+
+  .page-header__search-button {
+    display: block;
+
+    box-sizing: border-box;
+
+    background-image: url("../img/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .page-header__menu-button {
+    display: none;
+  }
+
+  .page-header___cart-info {
+    display: flex;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    .wrapper(@desktop-width);
+
+    padding: 0 @desktop-page-side-padding;
+  }
+
+  .page-header__logo-container {
+    width: auto;
+    margin: 0 101px 0 75px;
+  }
+
+  .page-header__logo {
+    width: 149px;
+    height: 72px;
+
+    background-image: url("../img/logo-desktop.svg");
+  }
+
+  .page-header__catalog-link-container,
+  .page-header__form-link-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header__catalog-link-container {
+    padding-right: 35px;
+
+    border-right: 1px solid @grey--light;
+  }
+
+  .page-header__form-link-container {
+    padding-left: 35px;
+  }
+
+  .page-header__section-link {
+    .block-link();
+    .title;
+
+    font-size: 17px;
+  }
 }

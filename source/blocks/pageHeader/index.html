@@ -1,8 +1,18 @@
 {% block content %}
 <header class="page-header">
   <div class="page-header__wrapper">
-    <a class="page-header__logo" href="/index.html">Мишка</a>
+    <div class="page-header__catalog-link-container">
+      <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+    </div>
+    <div class="page-header__form-link-container">
+      <a class="page-header__section-link" href="/form">Вязание на заказ</a>
+    </div>
+    <div class="page-header__logo-container">
+      <a class="page-header__logo" href="/index.html">Мишка</a>
+    </div>
+    <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
     {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
+    {% include '../cartInfo/index.html' with { class: 'page-header___cart-info' } %}
   </div>
 </header>
 {% endblock %}

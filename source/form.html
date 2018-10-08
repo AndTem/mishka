@@ -13,12 +13,25 @@
 <body>
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo" href="/index.html">Мишка</a>
+      <div class="page-header__catalog-link-container">
+        <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+      </div>
+      <div class="page-header__form-link-container">
+        <a class="page-header__section-link" href="/form">Вязание на заказ</a>
+      </div>
+      <div class="page-header__logo-container">
+        <a class="page-header__logo" href="/index.html">Мишка</a>
+      </div>
+      <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
       <button class="page-header__menu-button hamburger-button" type="button" onclick="">
         <span class="hamburger-button__item"></span>
         <span class="hamburger-button__item"></span>
         <span class="hamburger-button__item"></span>
       </button>
+      <div class="page-header___cart-info cart-info">
+        <button class="cart-info__cart-add-button cart-add-button" type="button"></button>
+        <span class="cart-info__content">Корзина: пока пуста</span>
+      </div>
     </div>
   </header>
   <main class="page-order page">
@@ -111,6 +124,7 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+      <a class="page-footer__logo" href="/index.html"></a>
       <div class="page-footer__social">
         <a class="page-footer__social-button page-footer__social-button--instagram" href="#"></a>
         <a class="page-footer__social-button page-footer__social-button--facebook" href="#"></a>
@@ -118,7 +132,7 @@
       </div>
       <div class="page-footer__copyright copyright">
         <h2 class="copyright__info">Разработано</h2>
-        <a class="copyright__logo" href="/index.html"></a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
       </div>
     </div>
   </footer>

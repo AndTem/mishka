@@ -50,6 +50,7 @@
 }
 
 .wrapper(@width) {
+  box-sizing: border-box;
   width: @width;
   margin: 0 auto;
 }
@@ -71,4 +72,9 @@
 
   background-image: url("../img/bg-zigzag-line.svg");
   background-size: contain;
+}
+
+.full-background-image() {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
