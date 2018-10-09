@@ -13,15 +13,19 @@
 %}
 {% block content %}
 <section class="{{ class }} promo">
-  <h1 class="promo__title">Милые штучки ручной работы</h2>
-  {% for promoProduct in promoProducts %}
-    {% include '../promoProduct/index.html' with {
-        class: 'promo__product',
-        mod: promoProduct.mod,
-        description: promoProduct.description,
-        srcImage: promoProduct.srcImage
-      }
-    %}
-  {% endfor %}
+  <div class="promo__wrapper">
+    <h1 class="promo__title">Милые штучки ручной работы</h2>
+    <div class="promo__products-container">
+      {% for promoProduct in promoProducts %}
+      {% include '../promoProduct/index.html' with {
+          class: 'promo__product',
+          mod: promoProduct.mod,
+          description: promoProduct.description,
+          srcImage: promoProduct.srcImage
+        }
+      %}
+      {% endfor %}
+    </div>
+  </div>
 </section>
 {% endblock %}

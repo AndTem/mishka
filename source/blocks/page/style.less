@@ -1,10 +1,26 @@
 .page__wrapper {
+  .wrapper(@mobile-width);
+
   box-sizing: border-box;
-  width: @mobile-width;
   padding: 0 @mobile-page-side-padding 0 @mobile-page-side-padding;
-  margin: 0 auto;
 }
 
 .page__section {
   position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .page__wrapper {
+    .wrapper(@tablet-width);
+
+    padding: 0 @tablet-page-side-padding 0 @tablet-page-side-padding;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__wrapper {
+    .wrapper(@desktop-width);
+
+    padding: 0 @desktop-page-side-padding 0 @desktop-page-side-padding;
+  }
 }

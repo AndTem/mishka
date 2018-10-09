@@ -1,9 +1,17 @@
-.about-us {
-  margin-bottom: 61px;
-}
-
 .about-us__title {
   .page-section-title();
 
   margin-bottom: 31px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__title {
+    margin-bottom: 47px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    padding: 0 225px 0 @desktop-section-left-padding;
+  }
 }

@@ -61,16 +61,35 @@
   transform: translateX(-50%);
 }
 
-.after-underscore-line(@margin-top) {
+.block-no-full-screen-width() {
+  min-width: auto;
+  margin-left: 0;
+  transform: none;
+}
+
+.after-underscore-line(@heigth, @margin-top) {
   .block-full-screen-width();
 
   content: "";
   position: absolute;
 
-  height: 6px;
-  margin-top: 36px;
+  height: @heigth;
+  margin-top: @margin-top;
 
   background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+}
+
+.after-underscore-line--fill(@heigth) {
+  .block-full-screen-width();
+
+  content: "";
+  position: absolute;
+
+  height: @heigth;
+  margin-top: calc(-@heigth / 2);
+
+  background-image: url("../img/bg-zigzag-fill.svg");
   background-size: contain;
 }
 

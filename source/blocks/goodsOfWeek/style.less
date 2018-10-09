@@ -51,3 +51,64 @@
 .goods-of-week__to-order-button {
   .block-link();
 }
+
+@media (min-width: @tablet-width) {
+  .goods-of-week__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 55px;
+  }
+
+  .goods-of-week__content {
+    position: relative;
+
+    padding-right: 376px;
+  }
+
+  .goods-of-week__description {
+    margin-bottom: 54px;
+  }
+
+  .goods-of-week__parameters-list {
+    margin-bottom: 59px;
+  }
+
+  .goods-of-week__parameter {
+    padding: 13px 0;
+  }
+
+  .goods-of-week__product-image {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    width: 333px;
+    height: 100%;
+  }
+
+  .goods-of-week__price {
+    margin-bottom: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods-of-week__header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    margin-bottom: 52px;
+  }
+
+  .goods-of-week__content {
+    padding: 0 583px 0 @desktop-section-left-padding;
+  }
+
+  .goods-of-week__product-image {
+    z-index: -1;
+
+    top: -163px;
+    width: 525px;
+    height: calc(100% + 163px);
+  }
+}

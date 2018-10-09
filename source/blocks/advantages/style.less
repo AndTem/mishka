@@ -1,6 +1,7 @@
 @advantages-description-font-weight: bold;
 
-.advantages {
+.advantages,
+.advantages__part-list {
   .list();
 }
 
@@ -9,6 +10,12 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.advantages__part-list-container {
+  &:first-child {
+    margin-bottom: 30px;
   }
 }
 
@@ -21,4 +28,16 @@
 
   font-size: 17px;
   font-weight: @advantages-description-font-weight;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    display: flex;
+  }
+
+  .advantages__part-list-container {
+    &:first-child {
+      margin-right: 99px;
+    }
+  }
 }

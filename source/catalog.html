@@ -12,26 +12,35 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <div class="page-header__catalog-link-container">
-        <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+    <div class="page-header__base-content-container">
+      <div class="page-header__wrapper">
+        <div class="page-header__catalog-link-container">
+          <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+        </div>
+        <div class="page-header__form-link-container">
+          <a class="page-header__section-link" href="/form">Вязание на заказ</a>
+        </div>
+        <div class="page-header__logo-container">
+          <a class="page-header__logo" href="/index.html">Мишка</a>
+        </div>
+        <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
+        <button class="page-header__menu-button hamburger-button" type="button" onclick="">
+          <span class="hamburger-button__item"></span>
+          <span class="hamburger-button__item"></span>
+          <span class="hamburger-button__item"></span>
+        </button>
+        <div class="page-header___cart-info cart-info">
+          <button class="cart-info__cart-add-button cart-add-button" type="button"></button>
+          <span class="cart-info__content">Корзина: пока пуста</span>
+        </div>
       </div>
-      <div class="page-header__form-link-container">
-        <a class="page-header__section-link" href="/form">Вязание на заказ</a>
+    </div>
+    <div class="page-header__optional-content-container">
+      <div class="page-header__optional-content">
+        <a class="page-header__optional-link" href="/catalog">Каталог товаров</a>
+        <a class="page-header__optional-link page-header__optional-link--right" href="/form">Вязание на заказ</a>
       </div>
-      <div class="page-header__logo-container">
-        <a class="page-header__logo" href="/index.html">Мишка</a>
-      </div>
-      <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
-      <button class="page-header__menu-button hamburger-button" type="button" onclick="">
-        <span class="hamburger-button__item"></span>
-        <span class="hamburger-button__item"></span>
-        <span class="hamburger-button__item"></span>
-      </button>
-      <div class="page-header___cart-info cart-info">
-        <button class="cart-info__cart-add-button cart-add-button" type="button"></button>
-        <span class="cart-info__content">Корзина: пока пуста</span>
-      </div>
+      <span class="page-header__delivery">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="page page-catalog">

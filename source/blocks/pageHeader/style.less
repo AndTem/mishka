@@ -1,10 +1,8 @@
 @page-header-mobile-height: 79px;
-@page-header-tablet-height: 88px;
+@page-header-tablet-height: 125px;
 
 .page-header {
   height: @page-header-mobile-height;
-
-  box-shadow: 0 1px 0 0 @grey--light, inset 0 1px 0 0 @grey--light;
 }
 
 .page-header__wrapper {
@@ -13,8 +11,11 @@
   display: flex;
   justify-content: center;
 
-  box-sizing: border-box;
   padding: 22px @mobile-page-side-padding;
+}
+
+.page-header__base-content-container {
+  box-shadow: 0 1px 0 0 @grey--light, inset 0 1px 0 0 @grey--light;
 }
 
 .page-header__search-button {
@@ -39,22 +40,57 @@
 
 .page-header___cart-info,
 .page-header__catalog-link-container,
-.page-header__form-link-container {
+.page-header__form-link-container,
+.page-header__optional-content-container {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     height: @page-header-tablet-height;
   }
 
-  .page-header__wrapper {
+  .page-header__base-content-container {
+    height: 88px;
+  }
+
+  .page-header__wrapper,
+  .page-header__optional-content-container {
     .wrapper(@tablet-width);
 
+    padding: 0 @tablet-page-side-padding;
+  }
+
+  .page-header__wrapper {
     justify-content: flex-start;
 
     height: 100%;
-    padding: 0 @tablet-page-side-padding;
+  }
+
+  .page-header__optional-content-container {
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 1;
+  }
+
+  .page-header__optional-content {
+    display: flex;
+  }
+
+  .page-header__optional-link {
+    .block-link();
+    .title();
+
+    font-size: 15px;
+
+    &--right {
+      margin-left: 37px;
+    }
   }
 
   .page-header__logo-container {
@@ -89,13 +125,27 @@
     display: flex;
     flex-grow: 1;
   }
+
+  .page-header__section-link {
+    .block-link();
+    .title;
+
+    font-size: 17px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper {
+  .page-header__wrapper,
+  .page-header__optional-content-container {
     .wrapper(@desktop-width);
 
     padding: 0 @desktop-page-side-padding;
+  }
+
+  .page-header__optional-link {
+    &--right {
+      margin-left: 60px;
+    }
   }
 
   .page-header__logo-container {
@@ -124,12 +174,5 @@
 
   .page-header__form-link-container {
     padding-left: 35px;
-  }
-
-  .page-header__section-link {
-    .block-link();
-    .title;
-
-    font-size: 17px;
   }
 }

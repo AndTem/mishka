@@ -1,18 +1,35 @@
 {% block content %}
 <header class="page-header">
-  <div class="page-header__wrapper">
-    <div class="page-header__catalog-link-container">
-      <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+  <div class="page-header__base-content-container">
+    <div class="page-header__wrapper">
+      <div class="page-header__catalog-link-container">
+        <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+      </div>
+      <div class="page-header__form-link-container">
+        <a class="page-header__section-link" href="/form">Вязание на заказ</a>
+      </div>
+      <div class="page-header__logo-container">
+        <a class="page-header__logo" href="/index.html">Мишка</a>
+      </div>
+      <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
+      {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
+      {% include '../cartInfo/index.html' with { class: 'page-header___cart-info' } %}
     </div>
-    <div class="page-header__form-link-container">
-      <a class="page-header__section-link" href="/form">Вязание на заказ</a>
-    </div>
-    <div class="page-header__logo-container">
-      <a class="page-header__logo" href="/index.html">Мишка</a>
-    </div>
-    <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
-    {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
-    {% include '../cartInfo/index.html' with { class: 'page-header___cart-info' } %}
+  </div>
+  <div class="page-header__optional-content-container">
+    {% if optionalContentMain == true %}
+      <div class="page-header__optional-content">
+        <a class="page-header__optional-link" href="/catalog">Новые поступления</a>
+        <a class="page-header__optional-link page-header__optional-link--right" href="/catalog">Распродажа</a>
+      </div>
+    {% endif %}
+    {% if optionalContentMain == false %}
+      <div class="page-header__optional-content">
+        <a class="page-header__optional-link" href="/catalog">Каталог товаров</a>
+        <a class="page-header__optional-link page-header__optional-link--right" href="/form">Вязание на заказ</a>
+      </div>
+    {% endif %}
+    <span class="page-header__delivery">Бесплатная доставка по России</span>
   </div>
 </header>
 {% endblock %}
