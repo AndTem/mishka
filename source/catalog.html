@@ -1,135 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/style.css" rel="stylesheet">
 
-  <link href="./css/style.css" rel="stylesheet">
-
-  <title>HTML Academy: Мишка</title>
-</head>
-
-<body>
-  <header class="page-header">
-    <div class="page-header__base-content-container">
-      <div class="page-header__wrapper">
-        <div class="page-header__content-container page-header__content-container--left">
-          <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
-          <a class="page-header__section-link" href="/form">Вязание на заказ</a>
-        </div>
-        <div class="page-header__logo-container">
-          <a class="page-header__logo" href="/index.html">Мишка</a>
-        </div>
-        <div class="page-header__content-container page-header__content-container--right">
-          <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
-          <div class="page-header___cart-info cart-info">
-            <button class="cart-info__cart-add-button cart-add-button" type="button"></button>
-            <span class="cart-info__content">Корзина: пока пуста</span>
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__base-content-container">
+        <div class="page-header__wrapper">
+          <div class="page-header__content-container page-header__content-container--left">
+            <a class="page-header__section-link" href="/catalog">Каталог товаров</a>
+            <a class="page-header__section-link" href="/form">Вязание на заказ</a>
           </div>
-        </div>
-        <button class="page-header__menu-button hamburger-button" type="button" onclick="">
-          <span class="hamburger-button__item"></span>
-          <span class="hamburger-button__item"></span>
-          <span class="hamburger-button__item"></span>
-        </button>
-      </div>
-    </div>
-    <div class="page-header__optional-content-container">
-      <div class="page-header__optional-content">
-        <a class="page-header__optional-link" href="/catalog">Каталог товаров</a>
-        <a class="page-header__optional-link page-header__optional-link--right" href="/form">Вязание на заказ</a>
-      </div>
-      <span class="page-header__delivery">Бесплатная доставка по России</span>
-    </div>
-  </header>
-  <main class="page page-catalog">
-    <div class="page-catalog__section-name page__section page__section-name section-name">
-      <div class="section-name__wrapper">
-        <span class="section-name__title">Каталог товаров</span>
-      </div>
-    </div>
-    <div class="page__wrapper">
-      <ul class="page-catalog__catalog-list page__section">
-        <li class="page-catalog__catalog-item">
-          <div class="product">
-            <a class="product__image-container" href="#">
-              <img class="product__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
-            </a>
-            <div class="product__info-container">
-              <div class="product__description">
-                <a class="product__name" href="#">Зайчик-попрыгайчик</a>
-                <span class="product__parameters">Рост 30 см, вес 200 г</span>
-              </div>
-              <div class="product__about-order">
-                <span class="product__price">1 200 руб.</span>
-                <button class="product__cart-add-button cart-add-button" type="button"></button>
-              </div>
+          <div class="page-header__logo-container">
+            <a class="page-header__logo" href="/index.html">Мишка</a>
+          </div>
+          <div class="page-header__content-container page-header__content-container--right">
+            <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
+            <div class="page-header___cart-info cart-info">
+              <button class="cart-info__cart-add-button cart-add-button" type="button"></button>
+              <span class="cart-info__content">Корзина: пока пуста</span>
             </div>
           </div>
-        </li>
-        <li class="page-catalog__catalog-item">
-          <div class="product">
-            <a class="product__image-container" href="#">
-              <img class="product__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
-            </a>
-            <div class="product__info-container">
-              <div class="product__description">
-                <a class="product__name" href="#">Корзинка для белья</a>
-                <span class="product__parameters">Диаметр 15 см, высота 10 см</span>
-              </div>
-              <div class="product__about-order">
-                <span class="product__price">690 руб.</span>
-                <button class="product__cart-add-button cart-add-button" type="button"></button>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li class="page-catalog__catalog-item">
-          <div class="product">
-            <a class="product__image-container" href="#">
-              <img class="product__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
-            </a>
-            <div class="product__info-container">
-              <div class="product__description">
-                <a class="product__name" href="#">Большая корзинка для игрушек</a>
-                <span class="product__parameters">Диаметр 30 см, высота 30 см</span>
-              </div>
-              <div class="product__about-order">
-                <span class="product__price">1 500 руб.</span>
-                <button class="product__cart-add-button cart-add-button" type="button"></button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <article class="page-catalog__product-proccess page__section production-process">
-        <h2 class="production-process__title">Процесс производства</h2>
-        <video class="production-process__video" src="http://placehold.it/150x100"></video>
-        <div class="production-process__content">
-          <p class="production-process__description">
-            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-            появляются наши товары.
-          </p>
-          <a class="production-process__to-order-button button-base" href="#">сделать заказ</a>
+          <button class="page-header__menu-button hamburger-button" type="button" onclick="">
+            <span class="hamburger-button__item"></span>
+            <span class="hamburger-button__item"></span>
+            <span class="hamburger-button__item"></span>
+          </button>
         </div>
-      </article>
-    </div>
-  </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <a class="page-footer__logo" href="/index.html"></a>
-      <div class="page-footer__social">
-        <a class="page-footer__social-button page-footer__social-button--instagram" href="#"></a>
-        <a class="page-footer__social-button page-footer__social-button--facebook" href="#"></a>
-        <a class="page-footer__social-button page-footer__social-button--twitter" href="#"></a>
       </div>
-      <div class="page-footer__copyright copyright">
-        <h2 class="copyright__info">Разработано</h2>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      <div class="page-header__optional-content-container">
+        <div class="page-header__optional-content">
+          <a class="page-header__optional-link" href="/catalog">Каталог товаров</a>
+          <a class="page-header__optional-link page-header__optional-link--right" href="/form">Вязание на заказ</a>
+        </div>
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </header>
+    <main class="page page-catalog">
+      <div class="page-catalog__section-name page__section page__section-name section-name">
+        <div class="section-name__wrapper">
+          <span class="section-name__title">Каталог товаров</span>
+        </div>
+      </div>
+      <div class="page__wrapper">
+        <ul class="page-catalog__catalog-list page__section">
+          <li class="page-catalog__catalog-item">
+            <div class="product">
+              <a class="product__image-container" href="#">
+                <img class="product__image" src="./img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
+              </a>
+              <div class="product__info-container">
+                <div class="product__description">
+                  <a class="product__name" href="#">Зайчик-попрыгайчик</a>
+                  <span class="product__parameters">Рост 30 см, вес 200 г</span>
+                </div>
+                <div class="product__about-order">
+                  <span class="product__price">1 200 руб.</span>
+                  <button class="product__cart-add-button cart-add-button" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="page-catalog__catalog-item">
+            <div class="product">
+              <a class="product__image-container" href="#">
+                <img class="product__image" src="./img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
+              </a>
+              <div class="product__info-container">
+                <div class="product__description">
+                  <a class="product__name" href="#">Корзинка для белья</a>
+                  <span class="product__parameters">Диаметр 15 см, высота 10 см</span>
+                </div>
+                <div class="product__about-order">
+                  <span class="product__price">690 руб.</span>
+                  <button class="product__cart-add-button cart-add-button" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="page-catalog__catalog-item">
+            <div class="product">
+              <a class="product__image-container" href="#">
+                <img class="product__image" src="./img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
+              </a>
+              <div class="product__info-container">
+                <div class="product__description">
+                  <a class="product__name" href="#">Большая корзинка для игрушек</a>
+                  <span class="product__parameters">Диаметр 30 см, высота 30 см</span>
+                </div>
+                <div class="product__about-order">
+                  <span class="product__price">1 500 руб.</span>
+                  <button class="product__cart-add-button cart-add-button" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <article class="page-catalog__product-proccess page__section production-process">
+          <h2 class="production-process__title">Процесс производства</h2>
+          <video class="production-process__video" src="http://placehold.it/150x100"></video>
+          <div class="production-process__content">
+            <p class="production-process__description">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+              появляются наши товары.
+            </p>
+            <a class="production-process__to-order-button button-base" href="#">сделать заказ</a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="/index.html"></a>
+        <div class="page-footer__social">
+          <a class="page-footer__social-button page-footer__social-button--instagram" href="#"></a>
+          <a class="page-footer__social-button page-footer__social-button--facebook" href="#"></a>
+          <a class="page-footer__social-button page-footer__social-button--twitter" href="#"></a>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <h2 class="copyright__info">Разработано</h2>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
