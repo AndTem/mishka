@@ -67,25 +67,24 @@
   transform: none;
 }
 
-.after-underscore-line(@heigth, @margin-top) {
-  .block-full-screen-width();
-
+.after-underscore-line(@heigth, @side-padding, @margin-top) {
   content: "";
   position: absolute;
 
+  width: calc(100% + @side-padding * 2);
   height: @heigth;
-  margin-top: @margin-top;
+  left: -@side-padding;
+  bottom: -(@margin-top + @heigth);
 
   background-image: url("../img/bg-zigzag-line.svg");
   background-size: contain;
 }
 
 .after-underscore-line--fill(@heigth) {
-  .block-full-screen-width();
-
   content: "";
   position: absolute;
 
+  width: 100%;
   height: @heigth;
   margin-top: calc(-@heigth / 2);
 

@@ -40,8 +40,7 @@
 
 .page-header___cart-info,
 .page-header__catalog-link-container,
-.page-header__form-link-container,
-.page-header__optional-content-container {
+.page-header__content-container--left, {
   display: none;
 }
 
@@ -107,6 +106,11 @@
     background-image: url("../img/logo-tablet.svg");
   }
 
+  .page-header__content-container--right {
+    display: flex;
+    flex-grow: 1;
+  }
+
   .page-header__search-button {
     display: block;
 
@@ -160,19 +164,24 @@
     background-image: url("../img/logo-desktop.svg");
   }
 
-  .page-header__catalog-link-container,
-  .page-header__form-link-container {
+  .page-header__content-container--left {
+    display: flex;
+  }
+
+  .page-header__section-link {
     display: flex;
     align-items: center;
-  }
 
-  .page-header__catalog-link-container {
-    padding-right: 35px;
+    height: 100%;
 
-    border-right: 1px solid @grey--light;
-  }
+    &:first-child {
+      padding-right: 33px;
 
-  .page-header__form-link-container {
-    padding-left: 35px;
+      border-right: 1px solid @grey--light;
+    }
+
+    &:last-child {
+      padding-left: 35px;
+    }
   }
 }

@@ -20,7 +20,7 @@
   margin-bottom: 76px;
 
   &::after {
-    .after-underscore-line(@mobile-underscore-height, @goods-of-week-underscore-mobile-margin-top);
+    .after-underscore-line(@mobile-underscore-height, @mobile-page-side-padding, @goods-of-week-underscore-mobile-margin-top);
   }
 }
 
@@ -32,7 +32,7 @@
   margin-bottom: 95px;
 
   &::after {
-    .after-underscore-line(@mobile-underscore-height, @reviews-underscore-mobile-margin-top);
+    .after-underscore-line(@mobile-underscore-height, @mobile-page-side-padding, @reviews-underscore-mobile-margin-top);
   }
 }
 
@@ -54,7 +54,7 @@
     margin-bottom: 128px;
 
     &::after {
-      .after-underscore-line(@tablet-underscore-height, @goods-of-week-underscore-tablet-margin-top);
+      .after-underscore-line(@tablet-underscore-height, @tablet-page-side-padding, @goods-of-week-underscore-tablet-margin-top);
     }
   }
 
@@ -63,14 +63,14 @@
   }
 
   .page-main__reviews {
-    .block-full-screen-width();
-
     margin-bottom: 156px;
 
-    background-image: url("../img/review@1x.jpg");
-
     &::after {
-      .after-underscore-line(@tablet-underscore-height, @reviews-underscore-tablet-margin-top);
+      .after-underscore-line(@tablet-underscore-height, @tablet-page-side-padding, @reviews-underscore-tablet-margin-top);
+
+      width: 100%;
+      left: 0;
+      bottom: -79px;
     }
   }
 
@@ -93,7 +93,7 @@
     margin-bottom: 166px;
 
     &::after {
-      .after-underscore-line(@desktop-underscore-height, @goods-of-week-underscore-desktop-margin-top);
+      .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @goods-of-week-underscore-desktop-margin-top);
     }
   }
 
@@ -102,12 +102,15 @@
   }
 
   .page-main__reviews {
-    .block-no-full-screen-width();
-
-    margin-bottom: 161px;
+    margin-bottom: 223px;
 
     &::after {
-      .after-underscore-line(@desktop-underscore-height, @reviews-underscore-desktop-margin-top);
+      .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @reviews-underscore-desktop-margin-top);
+
+      width: 100%;
+      left: 0;
+
+      background-size: 100% 100%;
     }
   }
 

@@ -1,40 +1,16 @@
 {% block content %}
 <ul class="{{ className }} advantages">
-  <li class="advantages__part-list-container">
-    <ul class="advantages__part-list">
-      {% for advantage in advantages %}
-        {% if splitNum > loop.index %}
-          <li class="advantages__item">
-              <img
-                class="advantages__image"
-                src="{{ advantage.imageSrc }}"
-                alt="{{ advantage.imageAlt }}"
-              >
-              <p class="advantages__description">
-                {{ advantage.description }}
-              </p>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </li>
-  <li class="advantages__part-list-container">
-    <ul class="advantages__part-list">
-      {% for advantage in advantages %}
-        {% if splitNum <= loop.index %}
-          <li class="advantages__item">
-              <img
-                class="advantages__image"
-                src="{{ advantage.imageSrc }}"
-                alt="{{ advantage.imageAlt }}"
-              >
-              <p class="advantages__description">
-                {{ advantage.description }}
-              </p>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </li>
+  {% for advantage in advantages %}
+    <li class="advantages__item">
+        <img
+          class="advantages__image"
+          src="{{ advantage.imageSrc }}"
+          alt="{{ advantage.imageAlt }}"
+        >
+        <p class="advantages__description">
+          {{ advantage.description }}
+        </p>
+    </li>
+  {% endfor %}
 </ul>
 {% endblock %}

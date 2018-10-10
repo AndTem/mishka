@@ -61,16 +61,26 @@
   }
 
   .goods-of-week__content {
-    position: relative;
-
-    padding-right: 376px;
+    display: flex;
+    flex-direction: column;
   }
 
   .goods-of-week__description {
+    order: 1;
+
+    max-width: 291px;
     margin-bottom: 54px;
   }
 
+  .goods-of-week__parameters-list,
+  .goods-of-week__price,
+  .goods-of-week__to-order-button {
+    width: 291px;
+  }
+
   .goods-of-week__parameters-list {
+    order: 2;
+
     margin-bottom: 59px;
   }
 
@@ -78,17 +88,24 @@
     padding: 13px 0;
   }
 
-  .goods-of-week__product-image {
-    position: absolute;
+  .goods-of-week__price {
+    order: 3;
 
-    top: 0;
-    right: 0;
-    width: 333px;
-    height: 100%;
+    margin-bottom: 34px;
   }
 
-  .goods-of-week__price {
-    margin-bottom: 34px;
+  .goods-of-week__to-order-button {
+    order: 4;
+
+    box-sizing: border-box;
+  }
+
+  .goods-of-week__product-image {
+    order: 5;
+
+    width: 333px;
+    height: 404px;
+    margin: -404px 0 0 auto;
   }
 }
 
@@ -101,14 +118,18 @@
   }
 
   .goods-of-week__content {
-    padding: 0 583px 0 @desktop-section-left-padding;
+    padding-left: @desktop-section-left-padding;
+  }
+
+  .goods-of-week__parameter {
+    padding: 15px 0;
   }
 
   .goods-of-week__product-image {
     z-index: -1;
 
-    top: -163px;
     width: 525px;
-    height: calc(100% + 163px);
+    height: 636px;
+    margin-top: -636px;
   }
 }
