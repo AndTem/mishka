@@ -1,11 +1,17 @@
 .order-form__fieldset {
-  margin-bottom: 33px;
+  padding: 0;
 
   border: none;
 
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.order-form__wrapper {
+  .wrapper(@mobile-width);
+
+  padding: 30px @mobile-page-side-padding 0 @mobile-page-side-padding;
 }
 
 .order-form__legend {
@@ -21,11 +27,15 @@
 }
 
 .order-form__label {
+  display: block;
+
   font-size: 17px;
   color: @form-label-color;
 }
 
 .order-form__text-input {
+  width: 100%;
+
   border: none;
   box-shadow: inset 0 -2px 0 0 @black;
 }
@@ -57,4 +67,59 @@
   width: 100%;
 
   background: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__wrapper {
+    .wrapper(@tablet-width);
+
+    padding: 50px @tablet-page-side-padding;
+  }
+
+  .order-form__fieldset {
+    display: flex;
+
+    &--grey {
+      background-color: @fieldset-background;
+    }
+  }
+
+  .order-form__footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .order-form__additionally {
+    order: 1;
+
+    margin-bottom: 49px;
+  }
+
+  .order-form__submit-button {
+    order: 2;
+
+    width: 230px;
+  }
+
+  .order-form__note {
+    display: flex;
+    align-items: center;
+    order: 3;
+
+    margin-bottom: 0;
+  }
+
+  .order-form__additionally,
+  .order-form__text-area {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__wrapper {
+    .wrapper(@desktop-width);
+
+    padding: 50px @desktop-page-side-padding;
+  }
 }

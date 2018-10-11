@@ -4,7 +4,7 @@
   action="https://echo.htmlacademy.ru"
   method="POST"
 >
-  <fieldset class="order-form__fieldset">
+  <fieldset class="order-form__fieldset order-form__wrapper">
     <legend class="order-form__legend">Тип</legend>
     <label class="order-form__label">
       <input class="order-form__radio-button" type="radio" name="type" checked>
@@ -15,34 +15,36 @@
       Детская игрушка
     </label>
   </fieldset>
-  <fieldset class="order-form__fieldset">
-    <legend class="order-form__legend">Цвет</legend>
-    <label class="order-form__label">
-      <input class="order-form__checkbox" type="checkbox" name="color" checked>
-      Белый
-    </label>
-    <label class="order-form__label">
-      <input class="order-form__checkbox" type="checkbox" name="color" checked>
-      Серый
-    </label>
-    <label class="order-form__label">
-      <input class="order-form__checkbox" type="checkbox" name="color">
-      «Тиффани»
-    </label>
-    <label class="order-form__label">
-      <input class="order-form__checkbox" type="checkbox" name="color">
-      Черный
-    </label>
-    <label class="order-form__label">
-      <input class="order-form__checkbox" type="checkbox" name="color">
-      Розовый
-    </label>
-    <label class="order-form__label">
-      <input class="order-form__checkbox" type="checkbox" name="color">
-      Оранжевый
-    </label>
+  <fieldset class="order-form__fieldset order-form__fieldset--grey">
+    <div class="order-form__wrapper">
+      <legend class="order-form__legend">Цвет</legend>
+      <label class="order-form__label">
+        <input class="order-form__checkbox" type="checkbox" name="color" checked>
+        Белый
+      </label>
+      <label class="order-form__label">
+        <input class="order-form__checkbox" type="checkbox" name="color" checked>
+        Серый
+      </label>
+      <label class="order-form__label">
+        <input class="order-form__checkbox" type="checkbox" name="color">
+        «Тиффани»
+      </label>
+      <label class="order-form__label">
+        <input class="order-form__checkbox" type="checkbox" name="color">
+        Черный
+      </label>
+      <label class="order-form__label">
+        <input class="order-form__checkbox" type="checkbox" name="color">
+        Розовый
+      </label>
+      <label class="order-form__label">
+        <input class="order-form__checkbox" type="checkbox" name="color">
+        Оранжевый
+      </label>
+    </div>
   </fieldset>
-  <fieldset class="order-form__fieldset">
+  <fieldset class="order-form__fieldset order-form__wrapper">
     <legend class="order-form__legend">ФИО</legend>
     <label class="order-form__label order-form__label--vertical">
       Имя:
@@ -57,41 +59,47 @@
       <input class="order-form__text-input" type="text" name="surname" placeholder="Отчество, если желаете">
     </label>
   </fieldset>
-  <fieldset class="order-form__fieldset">
-    <legend class="order-form__legend order-form__legend--single">ТЕЛ</legend>
-    <div class="order-form__contact-input-container">
-      <input
-        class="order-form__text-input"
-        type="tel"
-        name="phone"
-        placeholder="Отчество, если желаете"
-        required
-      >
+  <div class="order-form__fieldset--grey">
+    <div class="order-form__wrapper">
+      <fieldset class="order-form__fieldset">
+        <legend class="order-form__legend order-form__legend--single">ТЕЛ</legend>
+        <div class="order-form__contact-input-container">
+          <input
+            class="order-form__text-input"
+            type="tel"
+            name="phone"
+            placeholder="Отчество, если желаете"
+            required
+          >
+        </div>
+      </fieldset>
+      <fieldset class="order-form__fieldset">
+        <legend class="order-form__legend order-form__legend--single">E-MAIL</legend>
+        <div class="order-form__contact-input-container">
+          <input
+            class="order-form__text-input"
+            type="email"
+            name="email"
+            placeholder="Отчество, если желаете"
+            required
+          >
+        </div>
+      </fieldset>
     </div>
-  </fieldset>
-  <fieldset class="order-form__fieldset">
-    <legend class="order-form__legend order-form__legend--single">E-MAIL</legend>
-    <div class="order-form__contact-input-container">
-      <input
-        class="order-form__text-input"
-        type="email"
-        name="email"
-        placeholder="Отчество, если желаете"
-        required
-      >
-    </div>
-  </fieldset>
-  <fieldset class="order-form__fieldset">
-    <legend class="order-form__legend">ДОП</legend>
-    <textarea
-      class="order-form__text-area"
-      name="additionally"
-      placeholder="Опишите все ваши пожелания к заказу"
-    ></textarea>
-  </fieldset>
-  <p class="order-form__note">Поля обязательны для заполнения</p>
-  <button class="order-form__submit-button button-base" type="submit">
-    отправить заказ
-  </button>
+  </div>
+  <div class="order-form__footer order-form__wrapper">
+    <fieldset class="order-form__additionally order-form__fieldset">
+      <legend class="order-form__legend">ДОП</legend>
+      <textarea
+        class="order-form__text-area"
+        name="additionally"
+        placeholder="Опишите все ваши пожелания к заказу"
+      ></textarea>
+    </fieldset>
+    <p class="order-form__note">Поля обязательны для заполнения</p>
+    <button class="order-form__submit-button button-base" type="submit">
+      отправить заказ
+    </button>
+  </div>
 </form>
 {% endblock %}

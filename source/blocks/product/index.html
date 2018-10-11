@@ -10,7 +10,7 @@
     </div>
     <div class="product__about-order">
       <span class="product__price">{{ price }} руб.</span>
-      <button class="product__add-basket-button" type="button"></button>
+      {% include '../cartAddButton/index.html' with { class: 'product__cart-add-button' } %}
     </div>
   </div>
 </div>

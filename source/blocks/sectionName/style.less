@@ -3,8 +3,18 @@
   background-color: @section-name-background;
 }
 
+.section-name__wrapper {
+  .wrapper(@mobile-width);
+}
+
 .section-name__title {
   .main-title();
 
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .section-name {
+    padding: 106px 0 78px 0;
+  }
 }

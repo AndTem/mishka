@@ -9,7 +9,7 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../blocks/pageHeader/index.html' %}
+    {% include '../blocks/pageHeader/index.html' with { optionalContentMain: true } %}
     <main class="page page-main">
       {% include '../blocks/promo/index.html' with {
           class: 'page-main__promo page__section page__section--no-padding'
@@ -17,7 +17,7 @@
       %}
       <div class="page__wrapper">
         {% include '../blocks/goodsOfWeek/index.html' with {
-            class: 'page-main__goods-of-week page__section page__section--decoration-underscore'
+            class: 'page-main__goods-of-week page__section'
           }
         %}
         {% include '../blocks/aboutUs/index.html' with {
@@ -25,7 +25,7 @@
           }
         %}
         {% include '../blocks/reviews/index.html' with {
-            class: 'page-main__reviews page__section page__section--decoration-underscore'
+            class: 'page-main__reviews page__section'
           }
         %}
         {% include '../blocks/contacts/index.html' with {

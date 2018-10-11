@@ -1,15 +1,120 @@
+@goods-of-week-underscore-mobile-margin-top: 36px;
+@reviews-underscore-mobile-margin-top: 45px;
+@mobile-underscore-height: 6px;
+
+@goods-of-week-underscore-tablet-margin-top: 53px;
+@reviews-underscore-tablet-margin-top: 69px;
+@tablet-underscore-height: 15px;
+@tablet-underscore-fill-height: 24px;
+
+@goods-of-week-underscore-desktop-margin-top: 73px;
+@reviews-underscore-desktop-margin-top: 67px;
+@desktop-underscore-height: 23px;
+@desktop-underscore-fill-height: 34px;
+
 .page-main__promo {
   margin-bottom: 34px;
 }
 
 .page-main__goods-of-week {
-  margin-bottom: 34px;
+  margin-bottom: 76px;
+
+  &::after {
+    .after-underscore-line(@mobile-underscore-height, @mobile-page-side-padding, @goods-of-week-underscore-mobile-margin-top);
+  }
+}
+
+.page-main__about-us {
+  margin-bottom: 61px;
 }
 
 .page-main__reviews {
-  margin-bottom: 44px;
+  margin-bottom: 95px;
+
+  &::after {
+    .after-underscore-line(@mobile-underscore-height, @mobile-page-side-padding, @reviews-underscore-mobile-margin-top);
+  }
 }
 
 .page-main__contacts {
   margin-bottom: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__promo {
+    margin-top: -36px;
+    margin-bottom: 55px;
+
+    &::after {
+      .after-underscore-line--fill(@tablet-underscore-fill-height);
+    }
+  }
+
+  .page-main__goods-of-week {
+    margin-bottom: 128px;
+
+    &::after {
+      .after-underscore-line(@tablet-underscore-height, @tablet-page-side-padding, @goods-of-week-underscore-tablet-margin-top);
+    }
+  }
+
+  .page-main__about-us {
+    margin-bottom: 82px;
+  }
+
+  .page-main__reviews {
+    margin-bottom: 156px;
+
+    &::after {
+      .after-underscore-line(@tablet-underscore-height, @tablet-page-side-padding, @reviews-underscore-tablet-margin-top);
+
+      width: 100%;
+      left: 0;
+      bottom: -79px;
+    }
+  }
+
+  .page-main__contacts {
+    margin-bottom: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__promo {
+    margin-top: -36px;
+    margin-bottom: 151px;
+
+    &::after {
+      .after-underscore-line--fill(@desktop-underscore-fill-height);
+    }
+  }
+
+  .page-main__goods-of-week {
+    margin-bottom: 166px;
+
+    &::after {
+      .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @goods-of-week-underscore-desktop-margin-top);
+    }
+  }
+
+  .page-main__about-us {
+    margin-bottom: 89px;
+  }
+
+  .page-main__reviews {
+    margin-bottom: 223px;
+
+    &::after {
+      .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @reviews-underscore-desktop-margin-top);
+
+      width: 100%;
+      left: 0;
+
+      background-size: 100% 100%;
+    }
+  }
+
+  .page-main__contacts {
+    margin-bottom: 105px;
+  }
 }

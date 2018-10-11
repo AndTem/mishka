@@ -1,0 +1,6 @@
+{% block content %}
+<div class="{{ class }} cart-info">
+  {% include '../cartAddButton/index.html' with { class: 'cart-info__cart-add-button' } %}
+  <span class="cart-info__content">Корзина: пока пуста</span>
+</div>
+{% endblock %}

@@ -14,3 +14,35 @@
 .page-order__form {
   margin-bottom: 55px;
 }
+
+@media (min-width: @tablet-width) {
+  .page-order__section-name {
+    position: relative;
+
+    margin: -36px 0 79px 0;
+
+    &::after {
+      .after-underscore-line--fill(@tablet-section-name-underscore-heigth);
+
+      margin-top: 79px - @tablet-section-name-underscore-heigth;
+    }
+  }
+
+  .page-order__form {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-order__section-name {
+    &::after {
+      .after-underscore-line--fill(@desktop-section-name-underscore-heigth);
+
+      margin-top: 79px - @desktop-section-name-underscore-heigth;
+    }
+  }
+
+  .page-order__description {
+    padding: 129px 203px 0 175px;
+  }
+}

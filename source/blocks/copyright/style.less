@@ -1,3 +1,11 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 40px 23px 40px;
+}
+
 .copyright__info {
   .title();
 
@@ -6,9 +14,20 @@
 
 .copyright__logo {
   .block-link();
+  .full-background-image();
 
   width: 27px;
   height: 34px;
 
   background-image: url("../img/htmlacademy.svg");
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding: 0;
+  }
+
+  .copyright__info {
+    margin-right: 30px;
+  }
 }

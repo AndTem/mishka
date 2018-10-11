@@ -1,6 +1,35 @@
 {% block content %}
 <header class="page-header">
-  <a class="page-header__logo" href="/index.html">Мишка</a>
-  {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
+  <div class="page-header__base-content-container">
+    <div class="page-header__wrapper">
+      <div class="page-header__content-container page-header__content-container--left">
+        <a class="page-header__section-link" href="/catalog.html">Каталог товаров</a>
+        <a class="page-header__section-link" href="/form.html">Вязание на заказ</a>
+      </div>
+      <div class="page-header__logo-container">
+        <a class="page-header__logo" href="/index.html">Мишка</a>
+      </div>
+      <div class="page-header__content-container page-header__content-container--right">
+        <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
+        {% include '../cartInfo/index.html' with { class: 'page-header___cart-info' } %}
+      </div>
+      {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
+    </div>
+  </div>
+  <div class="page-header__optional-content-container">
+    {% if optionalContentMain == true %}
+      <div class="page-header__optional-content">
+        <a class="page-header__optional-link" href="/catalog.html">Новые поступления</a>
+        <a class="page-header__optional-link page-header__optional-link--right" href="/catalog.html">Распродажа</a>
+      </div>
+    {% endif %}
+    {% if optionalContentMain == false %}
+      <div class="page-header__optional-content">
+        <a class="page-header__optional-link" href="/catalog.html">Каталог товаров</a>
+        <a class="page-header__optional-link page-header__optional-link--right" href="/form.html">Вязание на заказ</a>
+      </div>
+    {% endif %}
+    <span class="page-header__delivery">Бесплатная доставка по России</span>
+  </div>
 </header>
 {% endblock %}
