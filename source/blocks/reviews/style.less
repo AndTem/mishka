@@ -19,6 +19,7 @@
 
 .reviews__reviewer-name {
   font-weight: bold;
+  color: @black;
 }
 
 .reviews__reviewer-nick-name {
@@ -32,14 +33,33 @@
 }
 
 .reviews__switch-button {
+  .default-button();
+  .interaction-opacity();
+
   width: 50%;
   height: 52px;
 
   border: 1px solid @grey--light;
+
+  background-repeat: no-repeat;
+  background-size: 50px 26px;
+  background-position: center;
+
+  &--prev {
+    border-right: none;
+
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
 }
 
 .reviews__add-button {
   .block-link();
+
+  display: flex;
 }
 
 @media (min-width: @tablet-width) {

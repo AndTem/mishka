@@ -3,15 +3,28 @@
   flex-direction: column;
 }
 
-.production-process__title,
+.production-process__header,
 .production-process__content {
   border: 1px solid @grey--light;
 }
 
+.production-process__header {
+  padding: 29px 43px 26px 34px;
+}
+
+.production-process__header-icon {
+  display: flex;
+  align-items: center;
+
+  margin-right: 25px;
+
+  path {
+    fill: @icon-color--green;
+  }
+}
+
 .production-process__title {
   .title();
-
-  height: 96px;
 
   font-size: 17px;
 }
@@ -40,6 +53,8 @@
 
 .production-process__to-order-button {
   .block-link();
+
+  display: flex;
 }
 
 @media (min-width: @tablet-width) {

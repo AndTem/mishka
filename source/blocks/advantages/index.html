@@ -2,11 +2,9 @@
 <ul class="{{ className }} advantages">
   {% for advantage in advantages %}
     <li class="advantages__item">
-        <img
-          class="advantages__image"
-          src="{{ advantage.imageSrc }}"
-          alt="{{ advantage.imageAlt }}"
-        >
+        <div class="advantages__image">
+          {% include advantage.svgImage %}
+        </div>
         <p class="advantages__description">
           {{ advantage.description }}
         </p>

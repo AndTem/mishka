@@ -1,7 +1,17 @@
 @product-price-font-weight: bold;
 
 .product {
-  border: 1px solid @grey--light;
+  transition: box-shadow 0.2s ease;
+
+  &:focus {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 .product__image-container {
@@ -17,6 +27,8 @@
 
 .product__info-container {
   padding: 32px 28px 30px;
+
+  border: 1px solid @grey--light;
 }
 
 .product__description {
@@ -26,6 +38,7 @@
 .product__name {
   .block-link();
   .title();
+  .interaction-opacity();
 
   margin-bottom: 17px;
 

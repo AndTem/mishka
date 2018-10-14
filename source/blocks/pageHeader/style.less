@@ -9,13 +9,22 @@
   .wrapper(@mobile-width);
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 
   padding: 22px @mobile-page-side-padding;
 }
 
 .page-header__base-content-container {
   box-shadow: 0 1px 0 0 @grey--light, inset 0 1px 0 0 @grey--light;
+}
+
+.page-header__optional-content-container {
+  display: none;
+}
+
+.page-header__logo-container {
+  margin-left: 116px - @mobile-page-side-padding;
 }
 
 .page-header__search-button {
@@ -28,6 +37,8 @@
 }
 
 .page-header__logo {
+  .interaction-opacity();
+
   display: block;
   width: 86px;
   height: 35px;

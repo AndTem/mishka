@@ -1,9 +1,16 @@
 body {
   font-family: @default-font;
-  font-size: @main-font-size;
+  font-size: @main-font-size--mobile;
   font-weight: @main-font-weight;
   color: @main-font-color;
-  line-height: @main-line-height;
+  line-height: @main-line-height--mobile;
 
   background-color: @body-background;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    font-size: @main-font-size--tablet;
+    line-height: @main-line-height--tablet;
+  }
 }

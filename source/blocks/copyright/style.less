@@ -1,25 +1,46 @@
+@copyright-logo-hover-color: #46c1ae;
+
 .copyright {
+  .link();
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 22px 40px 23px 40px;
+
+  transition: opacity 0.2s ease;
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      .copyright__logo path {
+        fill: @copyright-logo-hover-color;
+      }
+    }
+  }
 }
 
 .copyright__info {
   .title();
 
   font-size: 19px;
+
+  transition: opacity 0.2s ease;
 }
 
 .copyright__logo {
-  .block-link();
-  .full-background-image();
+  display: flex;
+  align-items: center;
 
-  width: 27px;
-  height: 34px;
+  path {
+    fill: @icon-color--green;
 
-  background-image: url("../img/htmlacademy.svg");
+    transition: fill 0.2s ease;
+  }
 }
 
 @media (min-width: @tablet-width) {
