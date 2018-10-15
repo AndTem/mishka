@@ -1,3 +1,5 @@
+@contacts-mail-interaction: #46c1ae;
+
 .contacts__header {
   margin-bottom: 42px;
 }
@@ -19,6 +21,8 @@
 .contact-info__email {
   .link();
 
+  transition: color 0.1s ease;
+
   &::after {
     content: "";
 
@@ -27,6 +31,18 @@
     height: 1px;
 
     background-color: @green--light;
+  }
+
+  &:focus {
+    color: @contacts-mail-interaction;
+
+    opacity: 0.3;
+
+    &::after {
+      background-color: @contacts-mail-interaction;
+
+      opacity: 0.3;
+    }
   }
 }
 
@@ -71,12 +87,25 @@
     }
   }
 
+  .contact-info__email:hover {
+    color: @contacts-mail-interaction;
+
+    &::after {
+      background-color: @contacts-mail-interaction;
+    }
+  }
+
   .contacts__info-container {
     display: flex;
   }
 
   .contacts__maps {
     margin-bottom: 55px;
+  }
+
+  .contacts__feedback-button {
+    width: 230px;
+    margin: 0 auto;
   }
 }
 

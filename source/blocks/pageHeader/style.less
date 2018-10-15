@@ -49,7 +49,7 @@
   background-size: 100% 100%;
 }
 
-.page-header___cart-info,
+.page-header__cart-info,
 .page-header__catalog-link-container,
 .page-header__content-container--left, {
   display: none;
@@ -92,8 +92,13 @@
     display: flex;
   }
 
-  .page-header__optional-link {
+  .page-header__optional-link,
+  .page-header__delivery {
     .block-link();
+    .interaction-opacity();
+  }
+
+  .page-header__optional-link {
     .title();
 
     font-size: 15px;
@@ -103,11 +108,16 @@
     }
   }
 
+  .page-header__delivery {
+    font-weight: normal;
+  }
+
   .page-header__logo-container {
     display: flex;
     align-items: center;
 
     width: 321px;
+    margin-left: 0;
   }
 
   .page-header__logo {
@@ -117,28 +127,43 @@
     background-image: url("../img/logo-tablet.svg");
   }
 
-  .page-header__content-container--right {
-    display: flex;
-    flex-grow: 1;
+  .page-header__content-container {
+    height: 100%;
+
+    &--right {
+      display: flex;
+      flex-grow: 1;
+    }
   }
 
   .page-header__search-button {
-    display: block;
+    .icon-interaction();
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     box-sizing: border-box;
 
-    background-image: url("../img/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    path {
+      fill: @icon-color--grey;
+    }
   }
 
   .page-header__menu-button {
     display: none;
   }
 
-  .page-header___cart-info {
+  .page-header__cart-info {
     display: flex;
     flex-grow: 1;
+
+    padding-left: 31px;
   }
 
   .page-header__section-link {

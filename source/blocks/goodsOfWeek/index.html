@@ -22,7 +22,15 @@
         <span class="goods-of-week__parameter-value">15 см</span>
       </li>
     </ul>
-    <img class="goods-of-week__product-image" src="./img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
+    <picture class="goods-of-week__product-image">
+      <source srcset="./img/triple-set-tablet@1x.jpg" media="(min-width: {{ screenResolution.tabletWidth }})">
+      <img
+        src="./img/triple-set-mobile@1x.jpg"
+        width="333px"
+        height="315px"
+        alt="Вязаные корзинки"
+      >
+    </picture>
     <span class="goods-of-week__price">Цена: 990 руб.</span>
     <a class="goods-of-week__to-order-button button-base" href="#" onclick="console.log('Заказано')">
       Заказать

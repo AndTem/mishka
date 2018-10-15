@@ -10,8 +10,10 @@
         <a class="page-header__logo" href="/index.html">Мишка</a>
       </div>
       <div class="page-header__content-container page-header__content-container--right">
-        <a class="page-header__search-button" href="#" onclick="console.log('Search')"></a>
-        {% include '../cartInfo/index.html' with { class: 'page-header___cart-info' } %}
+        <a class="page-header__search-button" href="#">
+          {% include '../../img/icon-search.svg' %}
+        </a>
+        {% include '../cartInfo/index.html' with { class: 'page-header__cart-info' } %}
       </div>
       {% include '../hamburgerButton/index.html' with { class: 'page-header__menu-button' } %}
     </div>
@@ -29,7 +31,7 @@
         <a class="page-header__optional-link page-header__optional-link--right" href="/form.html">Вязание на заказ</a>
       </div>
     {% endif %}
-    <span class="page-header__delivery">Бесплатная доставка по России</span>
+    <a class="page-header__delivery" href="/form.html">Бесплатная доставка по России</a>
   </div>
 </header>
 {% endblock %}

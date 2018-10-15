@@ -1,6 +1,6 @@
 {% block content %}
-<div class="{{ class }} cart-info">
+<a class="{{ class }} cart-info" href="#">
   {% include '../cartAddButton/index.html' with { class: 'cart-info__cart-add-button' } %}
   <span class="cart-info__content">Корзина: пока пуста</span>
-</div>
+</a>
 {% endblock %}

@@ -4,7 +4,7 @@
   action="https://echo.htmlacademy.ru"
   method="POST"
 >
-  <section class="order-form__fieldset order-form__wrapper">
+  <section class="order-form__fieldset order-form__wrapper order-form__fieldset--type-radio">
     <h3 class="order-form__legend">Тип</h3>
     <label class="order-form__label-container">
       <input class="order-form__radio-button" type="radio" name="type" checked>
@@ -17,7 +17,7 @@
       <span class="order-form__label">Детская игрушка</span>
     </label>
   </section>
-  <section class="order-form__fieldset order-form__fieldset--grey">
+  <section class="order-form__fieldset order-form__fieldset--grey order-form__fieldset--type-checkbox">
     <div class="order-form__wrapper">
       <h3 class="order-form__legend">Цвет</h3>
       <label class="order-form__label-container">
@@ -52,7 +52,7 @@
       </label>
     </div>
   </section>
-  <section class="order-form__fieldset order-form__wrapper order-form__full-name-fieldset">
+  <section class="order-form__fieldset order-form__wrapper order-form__fieldset--type-text">
     <h3 class="order-form__legend">ФИО</h3>
     <label class="order-form__text-label-container">
       <span class="order-form__text-label">Имя:</span>
@@ -85,8 +85,8 @@
     </label>
   </section>
   <div class="order-form__fieldset--grey">
-    <div class="order-form__wrapper">
-      <section class="order-form__fieldset order-form__fieldset--phone">
+    <div class="order-form__wrapper order-form__wrapper-contact">
+      <section class="order-form__fieldset order-form__fieldset--type-contact order-form__fieldset--phone">
         <h3 class="order-form__legend order-form__legend--single">ТЕЛ</h3>
         <div class="order-form__contact-input-container">
           <input
@@ -101,7 +101,7 @@
           </div>
         </div>
       </section>
-      <section class="order-form__fieldset">
+      <section class="order-form__fieldset order-form__fieldset--type-contact">
         <h3 class="order-form__legend order-form__legend--single">E-MAIL</h3>
         <div class="order-form__contact-input-container">
           <input

@@ -24,11 +24,23 @@
 }
 
 @media (min-width: @tablet-width) {
+  .promo {
+    padding-top: 160px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-size: auto;
+  }
+
   .promo__wrapper {
     .wrapper(@tablet-width);
 
     box-sizing: border-box;
     padding: 0 @tablet-page-side-padding 0 @tablet-page-side-padding;
+  }
+
+  .promo__title {
+    width: auto;
+    margin-bottom: 371px;
   }
 
   .promo__products-container {
