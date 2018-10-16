@@ -46,6 +46,7 @@
   </head>
   <body>
     {% include '../blocks/pageHeader/index.html' with { class: 'page-catalog__header' } %}
+    {% include '../blocks/mainNav/index.html' %}
     <main class="page page-catalog">
       {% include '../blocks/sectionName/index.html' with {
           class: 'page-catalog__section-name page__section page__section-name', name: 'Каталог товаров'
@@ -75,5 +76,6 @@
       </div>
     </main>
     {% include '../blocks/pageFooter/index.html' %}
+    <script src="./blocks/mainNav/menu.js" type="text/javascript"></script>
   </body>
 </html>

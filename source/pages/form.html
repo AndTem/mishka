@@ -15,6 +15,7 @@
   </head>
   <body>
     {% include '../blocks/pageHeader/index.html' with { class: 'page-order__header', optionalContentMain: false } %}
+    {% include '../blocks/mainNav/index.html' %}
     <main class="page-order page">
       {% include '../blocks/sectionName/index.html' with {
           class: 'page-order__section-name',
@@ -30,5 +31,6 @@
       {% include '../blocks/orderForm/index.html' with { class: 'page-order__form' } %}
     </main>
     {% include '../blocks/pageFooter/index.html' %}
+    <script src="./blocks/mainNav/menu.js" type="text/javascript"></script>
   </body>
 </html>
