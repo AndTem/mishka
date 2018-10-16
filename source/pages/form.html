@@ -14,7 +14,7 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../blocks/pageHeader/index.html' with { optionalContentMain: false } %}
+    {% include '../blocks/pageHeader/index.html' with { class: 'page-order__header', optionalContentMain: false } %}
     <main class="page-order page">
       {% include '../blocks/sectionName/index.html' with {
           class: 'page-order__section-name',

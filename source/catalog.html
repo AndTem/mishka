@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-catalog__header page-header">
     <div class="page-header__base-content-container">
       <div class="page-header__wrapper">
         <div class="page-header__content-container page-header__content-container--left">
@@ -41,7 +41,11 @@
     </div>
   </div>
   <div class=" page-header__optional-content-container">
-          <div class="page-header__optional-content">
+          <div class="page-header__optional-content page-header__optional-content--main">
+            <a class="page-header__optional-link" href="/catalog.html">Новые поступления</a>
+            <a class="page-header__optional-link page-header__optional-link--right" href="/catalog.html">Распродажа</a>
+          </div>
+          <div class="page-header__optional-content page-header__optional-content--no-main">
             <a class="page-header__optional-link" href="/catalog.html">Каталог товаров</a>
             <a class="page-header__optional-link page-header__optional-link--right" href="/form.html">Вязание на заказ</a>
           </div>
@@ -60,6 +64,7 @@
           <div class="product">
             <a class="product__image-container" href="#">
               <picture>
+                <source srcset="./img/photo-hare-desktop@1x.jpg" media="(min-width: 1150px)">
                 <source srcset="./img/photo-hare-tablet@1x.jpg" media="(min-width: 768px)">
                 <img class="product__image" src="./img/photo-hare-mobile@1x.jpg" width="250" height="165" alt="Зайчик-попрыгайчик">
               </picture>
@@ -84,6 +89,7 @@
           <div class="product">
             <a class="product__image-container" href="#">
               <picture>
+                <source srcset="./img/photo-bowl-desktop@1x.jpg" media="(min-width: 1150px)">
                 <source srcset="./img/photo-bowl-tablet@1x.jpg" media="(min-width: 768px)">
                 <img class="product__image" src="./img/photo-bowl-mobile@1x.jpg" width="250" height="165" alt="Корзинка для белья">
               </picture>
@@ -108,6 +114,7 @@
           <div class="product">
             <a class="product__image-container" href="#">
               <picture>
+                <source srcset="./img/photo-toys-desktop@1x.jpg" media="(min-width: 1150px)">
                 <source srcset="./img/photo-toys-tablet@1x.jpg" media="(min-width: 768px)">
                 <img class="product__image" src="./img/photo-toys-mobile@1x.jpg" width="250" height="165" alt="Большая корзинка для игрушек">
               </picture>
@@ -141,6 +148,7 @@
           <h2 class="production-process__title">Процесс производства</h2>
         </header>
         <picture>
+          <source srcset="./img/video-desktop@1x.jpg" media="(min-width: 1150px)">
           <source srcset="./img/video-tablet@1x.jpg" media="(min-width: 768px)">
           <img class="production-process__video" src="./img/video-mobile@1x.jpg" width="260" height="160" alt="Видео процесса производства">
         </picture>

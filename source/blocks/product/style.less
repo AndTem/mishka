@@ -107,6 +107,20 @@
 
 @media (min-width: @desktop-width) {
   .product {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
+  }
+
+  .product__image-container {
+    height: 462px;
+  }
+
+  .product__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 }

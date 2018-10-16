@@ -2,6 +2,7 @@
 <div class="product">
   <a class="product__image-container" href="{{ link }}">
     <picture>
+        <source srcset="{{ srcDesktopImage }}" media="(min-width: {{ screenResolution.desktopWidth }})">
       <source srcset="{{ srcTabletImage }}" media="(min-width: {{ screenResolution.tabletWidth }})">
       <img
         class="product__image"

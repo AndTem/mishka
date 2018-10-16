@@ -29,6 +29,7 @@
   margin: 0 0 25px 0;
 
   font-size: 17px;
+  line-height: 16px;
   color: @form-legend-color;
   text-transform: uppercase;
 
@@ -333,6 +334,55 @@
   .order-form__wrapper {
     .wrapper(@desktop-width);
 
-    padding: 50px @desktop-page-side-padding;
+    padding: 50px 50px 50px (@desktop-page-side-padding + 64px);
+  }
+
+  .order-form__legend {
+    width: 10%;
+  }
+
+  .order-form__fieldset--type-radio .order-form__label-container {
+    width: 90%;
+  }
+
+  .order-form__fieldset--type-checkbox .order-form__label-container {
+    width: 30%;
+
+    &:nth-last-child(2n + 2) {
+      margin-left: 0;
+    }
+
+    &:nth-child(5n + 5) {
+      margin-left: auto;
+      margin-bottom: 0;
+    }
+  }
+
+  .order-form__fieldset--type-text .order-form__text-label-container {
+    width: 70%;
+
+    &:not(:nth-child(1)) {
+      margin-left: 10%;
+    }
+
+    &:nth-child(2) {
+      margin-left: 0;
+    }
+  }
+
+  .order-form__fieldset--type-contact .order-form__contact-input-container:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .order-form__text-area {
+    width: 70%;
+  }
+
+  .order-form__note {
+    margin-right: 198px;
+  }
+
+  .order-form__submit-button {
+    margin-left: 99px;
   }
 }

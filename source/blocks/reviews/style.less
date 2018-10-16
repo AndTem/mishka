@@ -70,8 +70,6 @@
     align-items: center;
 
     box-sizing: border-box;
-    width: calc(100% + @tablet-page-side-padding * 2);
-    margin-left: -@tablet-page-side-padding;
     padding: 86px @tablet-page-side-padding 0 @tablet-page-side-padding;
 
     background-image: url("../img/review@1x.jpg");
@@ -133,9 +131,7 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    width: @desktop-width + @desktop-page-side-padding;
-    margin-left: -@desktop-page-side-padding;
-    padding-left: @desktop-section-left-padding + @desktop-page-side-padding;
+    padding-left: @desktop-section-left-padding;
   }
 
   .reviews__title {
