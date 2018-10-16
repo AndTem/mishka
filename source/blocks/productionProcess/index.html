@@ -6,7 +6,10 @@
     </div>
     <h2 class="production-process__title">Процесс производства</h2>
   </header>
-  <video class="production-process__video" src="http://placehold.it/150x100"></video>
+  <picture>
+    <source srcset="./img/video-tablet@1x.jpg" media="(min-width: {{ screenResolution.tabletWidth }})">
+    <img class="production-process__video" src="./img/video-mobile@1x.jpg" width="260" height="160" alt="Видео процесса производства">
+  </picture>
   <div class="production-process__content">
     <p class="production-process__description">
       По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как

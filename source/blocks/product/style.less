@@ -72,6 +72,10 @@
     height: 334px;
   }
 
+  .product__name {
+    margin-bottom: 15px;
+  }
+
   .product__image-container {
     height: 100%;
     width: 334px;
@@ -82,6 +86,22 @@
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product__price,
+  .product__name {
+    line-height: 24px;
+  }
+
+  .product__name {
+    font-size: 20px;
+  }
+
+  .product__parameters {
+    font-size: 15px;
+    line-height: 30px;
   }
 }
 

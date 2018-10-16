@@ -1,6 +1,10 @@
 .production-process {
   display: flex;
   flex-direction: column;
+
+  picture {
+    display: flex;
+  }
 }
 
 .production-process__header,
@@ -9,6 +13,9 @@
 }
 
 .production-process__header {
+  display: flex;
+  align-items: center;
+
   padding: 29px 43px 26px 34px;
 }
 
@@ -16,6 +23,8 @@
   display: flex;
   align-items: center;
 
+  width: 32px;
+  height: 22px;
   margin-right: 25px;
 
   path {
@@ -64,10 +73,11 @@
     height: 455px;
   }
 
-  .production-process__title {
+  .production-process__header {
     order: 2;
 
-    height: 63px;
+    height: auto;
+    padding: 39px 42px 0;
 
     border-bottom: none;
   }
@@ -78,6 +88,13 @@
     padding: 41px 42px 46px;
 
     border-top: none;
+  }
+
+  .production-process__description {
+    margin-bottom: 40px;
+
+    font-size: 15px;
+    line-height: 30px;
   }
 }
 

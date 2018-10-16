@@ -1,21 +1,29 @@
+{% set screenResolution = {
+    tabletWidth: '768px',
+    desktopWidth: '1150px'
+  }
+%}
 {% set products = [
     {
       link: '#',
-      srcImage: './img/photo-hare-mobile@1x.jpg',
+      srcMobileImage: './img/photo-hare-mobile@1x.jpg',
+      srcTabletImage: './img/photo-hare-tablet@1x.jpg',
       name: 'Зайчик-попрыгайчик',
       parameters: 'Рост 30 см, вес 200 г',
       price: '1 200'
     },
     {
       link: '#',
-      srcImage: './img/photo-bowl-mobile@1x.jpg',
+      srcMobileImage: './img/photo-bowl-mobile@1x.jpg',
+      srcTabletImage: './img/photo-bowl-tablet@1x.jpg',
       name: 'Корзинка для белья',
       parameters: 'Диаметр 15 см, высота 10 см',
       price: '690'
     },
     {
       link: '#',
-      srcImage: './img/photo-toys-mobile@1x.jpg',
+      srcMobileImage: './img/photo-toys-mobile@1x.jpg',
+      srcTabletImage: './img/photo-toys-tablet@1x.jpg',
       name: 'Большая корзинка для игрушек',
       parameters: 'Диаметр 30 см, высота 30 см',
       price: '1 500'
@@ -46,7 +54,8 @@
             <li class="page-catalog__catalog-item">
               {% include '../blocks/product/index.html' with {
                   link: product.link,
-                  srcImage: product.srcImage,
+                  srcMobileImage: product.srcMobileImage,
+                  srcTabletImage: product.srcTabletImage,
                   name: product.name,
                   parameters: product.parameters,
                   price: product.price
