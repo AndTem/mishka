@@ -210,6 +210,8 @@
 
     height: 100%;
 
+    transition: color 0.15s ease;
+
     &:first-child {
       padding-right: 33px;
 
@@ -218,6 +220,14 @@
 
     &:last-child {
       padding-left: 35px;
+    }
+
+    &:hover {
+      color: fade(@black, 60%);
+    }
+
+    &:focus {
+      color: fade(@black, 30%);
     }
   }
 }

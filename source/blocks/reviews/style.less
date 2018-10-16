@@ -133,13 +133,21 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    width: 100%;
-    margin-left: 0;
-    padding-left: @desktop-section-left-padding;
+    width: @desktop-width + @desktop-page-side-padding;
+    margin-left: -@desktop-page-side-padding;
+    padding-left: @desktop-section-left-padding + @desktop-page-side-padding;
+  }
+
+  .reviews__title {
+    line-height: 40px;
   }
 
   .reviews__content-container {
-    padding-bottom: 100px;
+    padding: 64px 107px 100px 0;
+  }
+
+  .reviews__content-text {
+    margin-bottom: 49px;
   }
 
   .reviews__switch {
