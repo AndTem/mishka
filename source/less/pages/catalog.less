@@ -16,6 +16,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-catalog__header .page-header__optional-content--main {
+    display: none;
+  }
+
+  .page-catalog__header .page-header__optional-content--no-main {
+    display: flex;
+  }
+
   .page-catalog__section-name {
     position: relative;
 
@@ -39,6 +47,18 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-catalog__header .page-header__optional-content--main {
+    display: flex;
+  }
+
+  .page-catalog__header .page-header__optional-content--no-main {
+    display: none;
+  }
+
+  .page-catalog__section-name {
+    margin-bottom: 128px;
+  }
+
   .page-catalog__catalog-list,
   .page-catalog__catalog-item {
     display: flex;

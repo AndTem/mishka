@@ -21,6 +21,10 @@
 
 .advantages__image {
   margin-bottom: 20px;
+
+  path {
+    fill: @icon-color--green;
+  }
 }
 
 .advantages__description {
@@ -28,6 +32,7 @@
 
   font-size: 17px;
   font-weight: @advantages-description-font-weight;
+  color: @black;
 }
 
 @media (min-width: @tablet-width) {
@@ -63,6 +68,8 @@
 
     &:nth-child(3) {
       order: 5;
+
+      margin-bottom: 0;
     }
 
     &:nth-child(6) {
@@ -74,20 +81,17 @@
     &:nth-child(5) {
       margin-right: 0;
     }
-
-    &:last-child {
-      margin-bottom: 60px;
-    }
   }
 
   .advantages__description {
     font-size: 20px;
+    line-height: 22px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .advantages__item {
     width: 47%;
-    margin: 0 39px 60px 0;
+    margin: 0 39px 57px 0;
   }
 }

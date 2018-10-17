@@ -1,3 +1,8 @@
+{% set screenResolution = {
+    tabletWidth: '768px',
+    desktopWidth: '1150px'
+  }
+%}
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -9,7 +14,8 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../blocks/pageHeader/index.html' with { optionalContentMain: false } %}
+    {% include '../blocks/pageHeader/index.html' with { class: 'page-order__header', optionalContentMain: false } %}
+    {% include '../blocks/mainNav/index.html' %}
     <main class="page-order page">
       {% include '../blocks/sectionName/index.html' with {
           class: 'page-order__section-name',
@@ -25,5 +31,6 @@
       {% include '../blocks/orderForm/index.html' with { class: 'page-order__form' } %}
     </main>
     {% include '../blocks/pageFooter/index.html' %}
+    <script src="./blocks/mainNav/menu.js" type="text/javascript"></script>
   </body>
 </html>

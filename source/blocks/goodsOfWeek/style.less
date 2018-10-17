@@ -1,36 +1,43 @@
 @goods-of-week-price-font-weight: bold;
 
 .goods-of-week__header {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .goods-of-week__product-name {
-  .title();
+  .page-section-title();
 
-  font-size: @section-page-title-font-size;
+  margin-bottom: 8px;
 }
 
 .goods-of-week__title {
   .title();
 
+  font-size: 17px;
   text-transform: uppercase;
   color: @green--light;
 }
 
 .goods-of-week__description {
-  margin: 0 0 33px 0;
+  margin: 0 0 30px 0;
 }
 
 .goods-of-week__parameters-list {
   .list();
 
-  margin: 0 0 28px 0;
+  margin-bottom: 28px;
 }
 
 .goods-of-week__parameter {
+  display: flex;
+
   padding: 11px 0;
 
   border-bottom: 1px solid @grey--light;
+}
+
+.goods-of-week__parameter-name {
+  width: 92px;
 }
 
 .goods-of-week__product-image {
@@ -49,14 +56,27 @@
 
 .goods-of-week__to-order-button {
   .block-link();
+
+  display: flex;
 }
 
 @media (min-width: @tablet-width) {
+  .goods-of-week {
+    min-height: 500px;
+  }
+
   .goods-of-week__header {
     display: flex;
     justify-content: space-between;
 
     margin-bottom: 55px;
+  }
+
+  .goods-of-week__title {
+    width: 70px;
+
+    text-align: center;
+    line-height: 17px;
   }
 
   .goods-of-week__content {
@@ -68,7 +88,9 @@
     order: 1;
 
     max-width: 291px;
-    margin-bottom: 54px;
+    margin-bottom: 42px;
+
+    line-height: 25px;
   }
 
   .goods-of-week__parameters-list,
@@ -84,13 +106,18 @@
   }
 
   .goods-of-week__parameter {
-    padding: 13px 0;
+    padding: 10px 0;
+
+    font-size: 15px;
+    line-height: 20px;
   }
 
   .goods-of-week__price {
     order: 3;
 
     margin-bottom: 34px;
+
+    line-height: 24px;
   }
 
   .goods-of-week__to-order-button {
@@ -100,10 +127,16 @@
   }
 
   .goods-of-week__product-image {
+    display: flex;
     order: 5;
 
     width: 333px;
     margin: -404px 0 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -111,16 +144,40 @@
   .goods-of-week__header {
     flex-direction: row-reverse;
     justify-content: flex-end;
+    align-items: center;
 
-    margin-bottom: 52px;
+    margin-bottom: 47px;
+    padding-left: 47px;
+  }
+
+  .goods-of-week__title {
+    margin-right: 55px;
+  }
+
+  .goods-of-week__product-name {
+    margin-bottom: 0;
   }
 
   .goods-of-week__content {
     padding-left: @desktop-section-left-padding;
   }
 
+  .goods-of-week__description {
+    margin-bottom: 45px;
+
+    line-height: @main-line-height--desktop;
+  }
+
+  .goods-of-week__parameters-list {
+    margin-bottom: 100px;
+  }
+
   .goods-of-week__parameter {
     padding: 15px 0;
+  }
+
+  .goods-of-week__price {
+    font-size: 20px;
   }
 
   .goods-of-week__product-image {

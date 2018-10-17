@@ -1,21 +1,32 @@
+{% set screenResolution = {
+    tabletWidth: '768px',
+    desktopWidth: '1150px'
+  }
+%}
 {% set products = [
     {
       link: '#',
-      srcImage: './img/photo-hare-mobile@1x.jpg',
+      srcMobileImage: './img/photo-hare-mobile@1x.jpg',
+      srcTabletImage: './img/photo-hare-tablet@1x.jpg',
+      srcDesktopImage: './img/photo-hare-desktop@1x.jpg',
       name: 'Зайчик-попрыгайчик',
       parameters: 'Рост 30 см, вес 200 г',
       price: '1 200'
     },
     {
       link: '#',
-      srcImage: './img/photo-bowl-mobile@1x.jpg',
+      srcMobileImage: './img/photo-bowl-mobile@1x.jpg',
+      srcTabletImage: './img/photo-bowl-tablet@1x.jpg',
+      srcDesktopImage: './img/photo-bowl-desktop@1x.jpg',
       name: 'Корзинка для белья',
       parameters: 'Диаметр 15 см, высота 10 см',
       price: '690'
     },
     {
       link: '#',
-      srcImage: './img/photo-toys-mobile@1x.jpg',
+      srcMobileImage: './img/photo-toys-mobile@1x.jpg',
+      srcTabletImage: './img/photo-toys-tablet@1x.jpg',
+      srcDesktopImage: './img/photo-toys-desktop@1x.jpg',
       name: 'Большая корзинка для игрушек',
       parameters: 'Диаметр 30 см, высота 30 см',
       price: '1 500'
@@ -34,7 +45,8 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-    {% include '../blocks/pageHeader/index.html' with { optionalContentMain: false } %}
+    {% include '../blocks/pageHeader/index.html' with { class: 'page-catalog__header' } %}
+    {% include '../blocks/mainNav/index.html' %}
     <main class="page page-catalog">
       {% include '../blocks/sectionName/index.html' with {
           class: 'page-catalog__section-name page__section page__section-name', name: 'Каталог товаров'
@@ -46,7 +58,9 @@
             <li class="page-catalog__catalog-item">
               {% include '../blocks/product/index.html' with {
                   link: product.link,
-                  srcImage: product.srcImage,
+                  srcMobileImage: product.srcMobileImage,
+                  srcTabletImage: product.srcTabletImage,
+                  srcDesktopImage: product.srcDesktopImage,
                   name: product.name,
                   parameters: product.parameters,
                   price: product.price
@@ -62,5 +76,6 @@
       </div>
     </main>
     {% include '../blocks/pageFooter/index.html' %}
+    <script src="./blocks/mainNav/menu.js" type="text/javascript"></script>
   </body>
 </html>

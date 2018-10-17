@@ -41,6 +41,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-main__header .page-header__optional-content--main {
+    display: flex;
+  }
+
+  .page-main__header .page-header__optional-content--no-main {
+    display: none;
+  }
+
   .page-main__promo {
     margin-top: -36px;
     margin-bottom: 55px;
@@ -63,6 +71,8 @@
   }
 
   .page-main__reviews {
+    width: calc(100% + @tablet-page-side-padding * 2);
+    margin-left: -@tablet-page-side-padding;
     margin-bottom: 156px;
 
     &::after {
@@ -82,7 +92,7 @@
 @media (min-width: @desktop-width) {
   .page-main__promo {
     margin-top: -36px;
-    margin-bottom: 151px;
+    margin-bottom: 134px;
 
     &::after {
       .after-underscore-line--fill(@desktop-underscore-fill-height);
@@ -94,6 +104,11 @@
 
     &::after {
       .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @goods-of-week-underscore-desktop-margin-top);
+
+      width: @desktop-width;
+      left: 0;
+
+      background-size: 100% 100%;
     }
   }
 
@@ -102,7 +117,8 @@
   }
 
   .page-main__reviews {
-    margin-bottom: 223px;
+    width: @desktop-width - @desktop-page-side-padding * 2;
+    margin: 0 auto 223px;
 
     &::after {
       .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @reviews-underscore-desktop-margin-top);

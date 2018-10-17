@@ -1,7 +1,10 @@
 @promo-product-description-color: @white;
+@promo-product-interaction-background-color: #59d5bc;
 
 .promo-product {
   .block-link();
+
+  transition: background-color 0.2s ease;
 
   &--light {
     background-color: @green--light;
@@ -9,6 +12,47 @@
 
   &--dark {
     background-color: @green--dark;
+  }
+
+  &:focus {
+    background-color: @promo-product-interaction-background-color;
+
+    .promo-product__image,
+    .promo-product__description {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      background-color: @promo-product-interaction-background-color;
+
+      .promo-product__image,
+      .promo-product__description {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.promo-product__image,
+.promo-product__description {
+  transition: opacity 0.2s ease;
+}
+
+.promo-product__image {
+  opacity: 0.5;
+
+  path {
+    fill: @green;
+  }
+
+  &--interior {
+    margin-right: 36px;
+  }
+
+  &--toy {
+    margin-right: 27px;
   }
 }
 
@@ -29,6 +73,8 @@
   width: 106px;
   margin: 30px 0;
 
+  font-size: 20px;
+  line-height: 30px;
   color: @promo-product-description-color;
 }
 
@@ -42,7 +88,4 @@
 
     padding-left: 37px;
   }
-}
-
-@media (min-width: @desktop-width) {
 }

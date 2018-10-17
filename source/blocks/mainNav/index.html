@@ -1,0 +1,29 @@
+{% block content %}
+<nav class="{{ class }} main-nav main-nav--closed main-nav--nojs">
+  <ul class="main-nav__list">
+    <li class="main-nav__item">
+      <div class="main-nav__wrapper">
+        <span class="main-nav__item-title">Каталог товаров</span>
+      </div>
+    </li>
+    <li class="main-nav__item">
+      <div class="main-nav__wrapper">
+        <span class="main-nav__item-title">Вязание на заказ</span>
+      </div>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__wrapper main-nav__block-link" href="#">
+        <div class="main-nav__item-icon main-nav__item-icon--search">
+          {% include '../../img/icon-search.svg' %}
+        </div>
+        <span class="main-nav__item-title">Поиск по сайту</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <div class="main-nav__wrapper main-nav__block-link">
+        {% include '../cartInfo/index.html' with { class: 'main-nav__cart-info' } %}
+      </div>
+    </li>
+  </ul>
+</nav>
+{% endblock %}
