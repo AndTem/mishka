@@ -151,3 +151,9 @@
     }
   }
 }
+
+.retina-background-image(@url-background) {
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url(@url-background);
+  }
+}
