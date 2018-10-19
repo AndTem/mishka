@@ -1,5 +1,7 @@
 {% block content %}
 <button class="{{ class }} cart-add-button" type="button">
-  {% include '../../img/icon-cart.svg' %}
+  <svg role="img">
+    <use xlink:href="icon-cart"></use>
+  </svg>
 </button>
 {% endblock %}
