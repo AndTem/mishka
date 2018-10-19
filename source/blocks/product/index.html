@@ -3,14 +3,32 @@
   <a class="product__image-container" href="{{ link }}">
     <picture>
       <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.desktopWidth }})"
+        srcset="{{ srcDesktopImageWebp }}.webp 1x,
+                {{ srcDesktopImageRetinaWebp }}.webp 2x"
+      >
+      <source
         media="(min-width: {{ screenResolution.desktopWidth }})"
         srcset="{{ srcDesktopImage }} 1x,
                 {{ srcDesktopImageRetina }} 2x"
       >
       <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.tabletWidth }})"
+        srcset="{{ srcTabletImageWebp }}.webp 1x,
+                {{ srcTabletImageRetinaWebp }}.webp 2x"
+      >
+      <source
         media="(min-width: {{ screenResolution.tabletWidth }})"
         srcset="{{ srcTabletImage }} 1x,
                 {{ srcTabletImageRetina }} 2x"
+      >
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.mobileWidth }})"
+        srcset="{{ srcMobileImageWebp }}.webp 1x,
+                {{ srcMobileImageRetinaWebp }}.webp 2x"
       >
       <img
         class="product__image"

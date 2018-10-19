@@ -12,6 +12,7 @@ const jpegtran = require("imagemin-jpegtran");
 const optipng = require("imagemin-optipng");
 const svgo = require("imagemin-svgo");
 const svgstore = require("gulp-svgstore");
+const rsp = require("remove-svg-properties").stream;
 const webp = require("gulp-webp");
 const twig = require("gulp-twig");
 const htmlbeautify = require("gulp-html-beautify");
@@ -47,7 +48,10 @@ gulp.task("images-opti", () =>
 
 gulp.task("sprite", () =>
   gulp.src("build/img/**/icon-*.svg")
-  .pipe(svgstore({ inlineSvg: true }))
+  .pipe(svgstore({ inlineSvg: true, emptyFills: true }))
+  .pipe(rsp.remove({
+    properties: [rsp.PROPS_FILL]
+  }))
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"))
 );
@@ -89,7 +93,7 @@ gulp.task("server", () => {
 
   gulp.watch("source/img/**", gulp.series("images-opti"));
 
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("build/*.html").on("change", server.reload);
 });
 
 gulp.task("start", gulp.series("build", "server"));

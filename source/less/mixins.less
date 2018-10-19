@@ -133,19 +133,19 @@
 .icon-interaction() {
   cursor: pointer;
 
-  path {
+  svg {
     transition: fill 0.2s ease;
   }
 
   &:focus {
-    path {
+    svg {
       fill: fade(@icon-color--green, 50%);
     }
   }
 
   @media (min-width: @tablet-width) {
     &:hover {
-      path {
+      svg {
         fill: @icon-color--green;
       }
     }

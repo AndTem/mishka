@@ -2,9 +2,15 @@
 <ul class="{{ className }} advantages">
   {% for advantage in advantages %}
     <li class="advantages__item">
-        <div class="advantages__image">
-          {% include advantage.svgImage %}
-        </div>
+        <svg
+          class="advantages__image"
+          width="{{ advantage.width }}"
+          height="{{ advantage.height }}"
+          role="presentation"
+        >
+          <title>{{ advantage.description }}</title>
+          <use xlink:href="#{{ advantage.svgImage }}"></use>
+        </svg>
         <p class="advantages__description">
           {{ advantage.description }}
         </p>
