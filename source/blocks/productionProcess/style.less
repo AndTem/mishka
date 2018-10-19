@@ -1,10 +1,6 @@
 .production-process {
   display: flex;
   flex-direction: column;
-
-  picture {
-    display: flex;
-  }
 }
 
 .production-process__header,
@@ -27,7 +23,7 @@
   height: 22px;
   margin-right: 25px;
 
-  path {
+  svg {
     fill: @icon-color--green;
   }
 }
@@ -40,11 +36,33 @@
 
 .production-process__video {
   .full-background-image();
+  .retina-background-image("../img/video-mobile@2x.jpg");
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   height: 150px;
   width: 100%;
 
   background-image: url("../img/video-mobile@1x.jpg");
+}
+
+.production-process__video-play-button {
+  .default-button();
+  .full-background-image();
+
+  width: 101px;
+  height: 77px;
+
+  background-image: url("../img/icon-play.svg");
+
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:focus {
+    transform: scale(0.8);
+  }
 }
 
 .production-process__content {
@@ -68,9 +86,17 @@
 
 @media (min-width: @tablet-width) {
   .production-process__video {
+    .retina-background-image("../img/video-tablet@2x.jpg");
+
     order: 1;
 
     height: 455px;
+
+    background-image: url("../img/video-tablet@1x.jpg");
+  }
+
+  .production-process__video-play-button:hover {
+    transform: scale(1.2);
   }
 
   .production-process__header {
@@ -102,17 +128,17 @@
   .production-process {
     position: relative;
     flex-direction: row;
-
-    picture {
-      display: flex;
-    }
   }
 
   .production-process__video {
+    .retina-background-image("../img/video-desktop@2x.jpg");
+
     order: 1;
 
     width: 682px;
     height: auto;
+
+    background-image: url("../img/video-desktop@1x.jpg");
   }
 
   .production-process__content {

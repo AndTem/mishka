@@ -9,7 +9,7 @@
       link: '#',
       srcMobileImageWebp: 'img/photo-hare-mobile@1x',
       srcMobileImage: 'img/photo-hare-mobile@1x.jpg',
-      srcMobileImageWebpRetina: 'img/photo-hare-mobile@2x',
+      srcMobileImageRetinaWebp: 'img/photo-hare-mobile@2x',
       srcMobileImageRetina: 'img/photo-hare-mobile@2x.jpg',
       srcTabletImageWebp: 'img/photo-hare-tablet@1x',
       srcTabletImage: 'img/photo-hare-tablet@1x.jpg',
@@ -27,7 +27,7 @@
       link: '#',
       srcMobileImageWebp: 'img/photo-bowl-mobile@1x',
       srcMobileImage: 'img/photo-bowl-mobile@1x.jpg',
-      srcMobileImageWebpRetina: 'img/photo-bowl-mobile@2x',
+      srcMobileImageRetinaWebp: 'img/photo-bowl-mobile@2x',
       srcMobileImageRetina: 'img/photo-bowl-mobile@2x.jpg',
       srcTabletImageWebp: 'img/photo-bowl-tablet@1x',
       srcTabletImage: 'img/photo-bowl-tablet@1x.jpg',
@@ -45,7 +45,7 @@
       link: '#',
       srcMobileImageWebp: 'img/photo-toys-mobile@1x',
       srcMobileImage: 'img/photo-toys-mobile@1x.jpg',
-      srcMobileImageWebpRetina: 'img/photo-toys-mobile@2x',
+      srcMobileImageRetinaWebp: 'img/photo-toys-mobile@2x',
       srcMobileImageRetina: 'img/photo-toys-mobile@2x.jpg',
       srcTabletImageWebp: 'img/photo-toys-tablet@1x',
       srcTabletImage: 'img/photo-toys-tablet@1x.jpg',
@@ -74,6 +74,7 @@
   </head>
   <body>
     <div style="display:none">{% include '../../build/img/sprite.svg' %}</div>
+    {% include '../blocks/modal/index.html' %}
     {% include '../blocks/pageHeader/index.html' with { class: 'page-catalog__header' } %}
     {% include '../blocks/mainNav/index.html' %}
     <main class="page page-catalog">
@@ -89,7 +90,7 @@
                   link: product.link,
                   srcMobileImageWebp: product.srcMobileImageWebp,
                   srcMobileImage: product.srcMobileImage,
-                  srcMobileImageRetinaWebp: product.srcMobileImageRetina,
+                  srcMobileImageRetinaWebp: product.srcMobileImageRetinaWebp,
                   srcMobileImageRetina: product.srcMobileImageRetina,
                   srcTabletImageWebp: product.srcTabletImageWebp,
                   srcTabletImage: product.srcTabletImage,

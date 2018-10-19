@@ -20,6 +20,9 @@
 
 .main-nav__wrapper {
   .wrapper(@mobile-width);
+  .block-link();
+
+  position: relative;
 
   padding: 30px @mobile-page-side-padding 30px 76px;
 
@@ -29,12 +32,6 @@
 .main-nav__item-title {
   font-size: 17px;
   font-weight: bold;
-}
-
-.main-nav__block-link {
-  .block-link();
-
-  position: relative;
 }
 
 .main-nav__item-icon {
