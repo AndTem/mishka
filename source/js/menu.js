@@ -7,3 +7,9 @@ menuHamburderButton.addEventListener('click', function() {
   console.log(mainNav.classList);
   mainNav.classList.toggle('main-nav--closed');
 });
+
+window.onhashchange = function () {
+  if (!mainNav.classList.contains('main-nav--closed')) {
+    mainNav.classList.toggle('main-nav--closed');
+  }
+};

@@ -2,17 +2,17 @@
 <nav class="{{ class }} main-nav main-nav--closed main-nav--nojs">
   <ul class="main-nav__list">
     <li class="main-nav__item">
-      <div class="main-nav__wrapper">
+      <a class="main-nav__wrapper" href="catalog.html">
         <span class="main-nav__item-title">Каталог товаров</span>
-      </div>
+      </a>
     </li>
     <li class="main-nav__item">
-      <div class="main-nav__wrapper">
+      <a class="main-nav__wrapper" href="form.html">
         <span class="main-nav__item-title">Вязание на заказ</span>
-      </div>
+      </a>
     </li>
     <li class="main-nav__item">
-      <a class="main-nav__wrapper main-nav__block-link" href="#">
+      <a class="main-nav__wrapper" href="#">
         <div class="main-nav__item-icon main-nav__item-icon--search">
           {% include '../../img/icon-search.svg' %}
         </div>
@@ -20,7 +20,7 @@
       </a>
     </li>
     <li class="main-nav__item">
-      <div class="main-nav__wrapper main-nav__block-link">
+      <div class="main-nav__wrapper">
         {% include '../cartInfo/index.html' with { class: 'main-nav__cart-info' } %}
       </div>
     </li>

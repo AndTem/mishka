@@ -12,9 +12,13 @@
 
     <link href="css/style.css" rel="stylesheet">
 
+    <script>document.createElement("picture");</script>
+    <script src="picturefill.js" async></script>
+
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <div style="display:none">{% include '../../build/img/sprite.svg' %}</div>
     {% include '../blocks/pageHeader/index.html' with { class: 'page-order__header', optionalContentMain: false } %}
     {% include '../blocks/mainNav/index.html' %}
     <main class="page-order page">

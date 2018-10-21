@@ -1,5 +1,5 @@
 @radio-button-border-color: #010000;
-@checked-radio-button-color: #62d1ba;
+@checked-color: #62d1ba;
 
 .order-form__fieldset {
   padding: 0;
@@ -83,6 +83,7 @@
 
   box-sizing: border-box;
   width: 40px;
+  min-width: 40px;
   height: 40px;
   margin-right: 22px;
 
@@ -93,21 +94,27 @@
   border-radius: 50%;
 }
 
-.order-form__radio-button:checked + .order-form__custom-radio-button::before {
-  content: "";
-  display: block;
-  position: absolute;
+.order-form__radio-button:checked + .order-form__custom-radio-button {
+  border-color: fade(@radio-button-border-color, 30%);
 
-  top: 10px;
-  left: 10px;
-  width: 16px;
-  height: 16px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
 
-  background-color: @checked-radio-button-color;
-  border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+
+    background-color: @checked-color;
+    border-radius: 50%;
+  }
 }
 
 .order-form__checkbox:checked + .order-form__custom-checkbox {
+  border-color: fade(@radio-button-border-color, 30%);
+
   background-image: url("../img/icon-tick.svg");
   background-size: 22px 16px;
   background-position: center;
@@ -139,8 +146,18 @@
 
   background: transparent;
 
+  &:focus {
+    box-shadow: inset 0 -2px 0 0 @checked-color;
+  }
+
   &--phone {
     font-size: 19px;
+  }
+}
+
+.order-form__text-input:focus + .order-form__contact-input-icon {
+  svg {
+    fill: @checked-color;
   }
 }
 
@@ -161,7 +178,7 @@
 
   bottom: 17px;
 
-  path {
+  svg {
     fill: @icon-color--grey;
   }
 
@@ -192,6 +209,10 @@
   border: solid 2px @black--light;
 
   resize: none;
+
+  &:focus {
+    border-color: @checked-color;
+  }
 }
 
 .order-form__additionally {
@@ -247,6 +268,23 @@
   .order-form__text-area {
     font-size: 19px;
     line-height: 18px;
+  }
+
+  .order-form__text-input:hover {
+    box-shadow: inset 0 -2px 0 0 @checked-color;
+  }
+
+  .order-form__text-input:hover + .order-form__contact-input-icon {
+    svg {
+      fill: @checked-color;
+    }
+  }
+
+  .order-form__checkbox:checked + .order-form__custom-checkbox:hover,
+  .order-form__radio-button:checked + .order-form__custom-radio-button:hover,
+  .order-form__custom-radio-button:hover,
+  .order-form__custom-checkbox:hover {
+    border-color: @checked-color;
   }
 
   .order-form__fieldset--type-contact .order-form__contact-input-container,
@@ -311,6 +349,10 @@
     order: 2;
 
     width: 230px;
+  }
+
+  .order-form__text-area:hover {
+    border-color: @checked-color;
   }
 
   .order-form__note {

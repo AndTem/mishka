@@ -1,5 +1,8 @@
 {% block content %}
-<button class="{{ class }} cart-add-button" type="button">
-  {% include '../../img/icon-cart.svg' %}
+<button class="{{ class }} cart-add-button" type="button" onclick="window.location.href = '#openModal'">
+  <svg width="21" height="18" role="img">
+    <title>Корзина</title>
+    <use xlink:href="#icon-cart"></use>
+  </svg>
 </button>
 {% endblock %}
