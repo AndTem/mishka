@@ -16,7 +16,6 @@ const rsp = require("remove-svg-properties").stream;
 const webp = require("gulp-webp");
 const twig = require("gulp-twig");
 const htmlbeautify = require("gulp-html-beautify");
-const htmlmin = require('gulp-htmlmin');
 const minify = require('gulp-minify');
 const server = require("browser-sync").create();
 
