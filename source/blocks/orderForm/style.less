@@ -112,6 +112,13 @@
   }
 }
 
+.order-form__radio-button:disabled + .order-form__custom-radio-button,
+.order-form__checkbox:disabled + .order-form__custom-checkbox {
+  cursor: not-allowed;
+
+  opacity: 0.5;
+}
+
 .order-form__checkbox:checked + .order-form__custom-checkbox {
   border-color: fade(@radio-button-border-color, 30%);
 

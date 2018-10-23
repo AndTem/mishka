@@ -72,9 +72,9 @@ gulp.task("template", () =>
 );
 
 gulp.task("js", () =>
-  gulp.src("source/js/**/*.js")
+  gulp.src("source/js/*.js")
   .pipe(minify())
-  .pipe(gulp.dest("build"))
+  .pipe(gulp.dest("build/js"))
 );
 
 gulp.task("build", gulp.series(
