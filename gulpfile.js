@@ -16,6 +16,8 @@ const rsp = require("remove-svg-properties").stream;
 const webp = require("gulp-webp");
 const twig = require("gulp-twig");
 const htmlbeautify = require("gulp-html-beautify");
+const htmlmin = require('gulp-htmlmin');
+const minify = require('gulp-minify');
 const server = require("browser-sync").create();
 
 const htmlbeautifyOptions = { indent_size: 2 };
@@ -33,7 +35,7 @@ gulp.task("css", () => {
 });
 
 gulp.task("copy", () =>
-  gulp.src(["source/fonts/**", "source/js/**"], { base: "source" })
+  gulp.src(["source/fonts/**"], { base: "source" })
   .pipe(gulp.dest("build")));
 
 gulp.task("images-opti", () =>
@@ -69,8 +71,14 @@ gulp.task("template", () =>
   .pipe(gulp.dest("build"))
 );
 
+gulp.task("js", () =>
+  gulp.src("source/js/**/*.js")
+  .pipe(minify())
+  .pipe(gulp.dest("build"))
+);
+
 gulp.task("build", gulp.series(
-  gulp.parallel("css", "copy"),
+  gulp.parallel("css", "js", "copy"),
   "images-opti",
   "sprite",
   gulp.parallel("webp", "template")
