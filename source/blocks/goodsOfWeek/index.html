@@ -26,42 +26,45 @@
       <source
         type="image/webp"
         media="(min-width: {{ screenResolution.desktopWidth }})"
+        sizes="525px"
         srcset="img/triple-set-desktop@1x.webp 1x,
                 img/triple-set-desktop@2x.webp 2x"
       >
       <source
         media="(min-width: {{ screenResolution.desktopWidth }})"
+        sizes="525px"
         srcset="img/triple-set-desktop@1x.jpg 1x,
                 img/triple-set-desktop@2x.jpg 2x"
       >
       <source
         type="image/webp"
         media="(min-width: {{ screenResolution.tabletWidth }})"
+        sizes="333px"
         srcset="img/triple-set-tablet@1x.webp 1x,
                 img/triple-set-tablet@2x.webp 2x"
       >
       <source
         media="(min-width: {{ screenResolution.tabletWidth }})"
+        sizes="333px"
         srcset="img/triple-set-tablet@1x.jpg 1x,
                 img/triple-set-tablet@2x.jpg 2x"
       >
       <source
         type="image/webp"
         media="(min-width: {{ screenResolution.mobileWidth }})"
+        sizes="260px"
         srcset="img/triple-set-mobile@1x.webp 1x,
                 img/triple-set-mobile@2x.webp 2x"
       >
       <img
         src="img/triple-set-mobile@1x.jpg"
         srcset="img/triple-set-mobile@2x.jpg 2x"
-        sizes="(min-width: {{ screenResolution.desktopWidth }}) 525px,
-              (min-width: {{ screenResolution.tabletWidth }}) 333px,
-              (min-width: {{ screenResolution.mobileWidth }}) 260px"
+        width="260"
         alt="Вязаные корзинки"
       >
     </picture>
     <span class="goods-of-week__price">Цена: 990 руб.</span>
-    <a class="goods-of-week__to-order-button button-base" href="#openModal"">
+    <a class="goods-of-week__to-order-button button-base" href="#openModal">
       Заказать
     </a>
   </div>
