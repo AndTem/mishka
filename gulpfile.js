@@ -15,7 +15,7 @@ const svgstore = require("gulp-svgstore");
 const rsp = require("remove-svg-properties").stream;
 const webp = require("gulp-webp");
 const twig = require("gulp-twig");
-const htmlbeautify = require("gulp-html-beautify");
+const htmlmin = require('gulp-htmlmin');
 const minify = require('gulp-minify');
 const server = require("browser-sync").create();
 
@@ -66,7 +66,7 @@ gulp.task("webp", () =>
 gulp.task("template", () =>
   gulp.src("source/pages/*.html")
   .pipe(twig())
-  .pipe(htmlbeautify(htmlbeautifyOptions))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"))
 );
 
