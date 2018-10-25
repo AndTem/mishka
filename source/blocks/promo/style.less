@@ -29,14 +29,16 @@
   .promo {
     .retina-background-image("../img/hero-tablet@2x.jpg");
 
-    padding-top: 160px;
+    padding-top: 154px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-size: auto 751px;
+    background-size: 1154px 771px;
   }
 
   .promo__wrapper {
     .wrapper(@tablet-width);
+
+    position: relative;
 
     box-sizing: border-box;
     padding: 0 @tablet-page-side-padding 0 @tablet-page-side-padding;
@@ -57,7 +59,7 @@
     .retina-background-image("../img/hero-desktop@2x.jpg");
 
     background-image: url("../img/hero-desktop@1x.jpg");
-    background-size: auto 765px;
+    background-size: auto 775px;
   }
 
   .promo__wrapper {
@@ -65,5 +67,9 @@
 
     box-sizing: border-box;
     padding: 0 @desktop-page-side-padding 0 @desktop-page-side-padding;
+  }
+
+  .promo__title {
+    margin-bottom: 357px;
   }
 }
