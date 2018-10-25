@@ -14,7 +14,7 @@
         <span class="goods-of-week__parameter-value">«Тиффани»/серый</span>
       </li>
       <li class="goods-of-week__parameter">
-        <span class="goods-of-week__parameter-name">Диаметер:</span>
+        <span class="goods-of-week__parameter-name">Диаметр:</span>
         <span class="goods-of-week__parameter-value">25 см</span>
       </li>
       <li class="goods-of-week__parameter">
@@ -22,7 +22,7 @@
         <span class="goods-of-week__parameter-value">15 см</span>
       </li>
     </ul>
-    <picture class="goods-of-week__product-image">
+    <picture>
       <source
         type="image/webp"
         media="(min-width: {{ screenResolution.desktopWidth }})"
@@ -52,6 +52,7 @@
                 img/triple-set-mobile@2x.webp 2x"
       >
       <img
+        class="goods-of-week__product-image"
         src="img/triple-set-mobile@1x.jpg"
         srcset="img/triple-set-mobile@2x.jpg 520w"
         sizes="(min-width: {{ screenResolution.desktopWidth }}) 525px, (min-width: {{ screenResolution.tabletWidth }}) 333px, (min-width: {{ screenResolution.mobileWidth }}) 260px"

@@ -78,11 +78,11 @@
   <body>
     <div style="display:none">{% include '../../build/img/sprite.svg' %}</div>
     {% include '../blocks/modal/index.html' %}
-    {% include '../blocks/pageHeader/index.html' with { class: 'page-catalog__header' } %}
-    {% include '../blocks/mainNav/index.html' %}
+    {% include '../blocks/pageHeader/index.html' %}
     <main class="page page-catalog">
       {% include '../blocks/sectionName/index.html' with {
-          class: 'page-catalog__section-name page__section page__section-name', name: 'Каталог товаров'
+          class: 'page-catalog__section-name page__section',
+          name: 'Каталог товаров'
         }
       %}
       <div class="page__wrapper">

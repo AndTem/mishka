@@ -2,6 +2,16 @@
 <nav class="{{ class }} main-nav main-nav--closed main-nav--nojs">
   <ul class="main-nav__list">
     <li class="main-nav__item">
+      <a class="main-nav__wrapper" href="form.html">
+        <span class="main-nav__item-title">Новые поступления</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
+      <a class="main-nav__wrapper" href="form.html">
+        <span class="main-nav__item-title">Распродажа</span>
+      </a>
+    </li>
+    <li class="main-nav__item">
       <a class="main-nav__wrapper" href="catalog.html">
         <span class="main-nav__item-title">Каталог товаров</span>
       </a>
@@ -11,15 +21,21 @@
         <span class="main-nav__item-title">Вязание на заказ</span>
       </a>
     </li>
-    <li class="main-nav__item">
+    <li class="main-nav__item main-nav__item--search">
       <a class="main-nav__wrapper" href="#">
         <div class="main-nav__item-icon main-nav__item-icon--search">
-          {% include '../../img/icon-search.svg' %}
+          <svg role="img">
+            <title>Поиск</title>
+            <use xlink:href="#icon-search"></use>
+          </svg>
         </div>
         <span class="main-nav__item-title">Поиск по сайту</span>
       </a>
     </li>
-    <li class="main-nav__item">
+    <li class="main-nav__item main-nav__item--delivery">
+      <span class="delivery">Бесплатная доставка по России</span>
+    </li>
+    <li class="main-nav__item main-nav__item--cart-info">
       <div class="main-nav__wrapper">
         {% include '../cartInfo/index.html' with { class: 'main-nav__cart-info' } %}
       </div>
