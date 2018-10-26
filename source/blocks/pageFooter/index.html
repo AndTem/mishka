@@ -1,7 +1,13 @@
 {% block content %}
-<footer class="page-footer">
+<footer class="{{ class }} page-footer">
   <div class="page-footer__wrapper">
-    <a class="page-footer__logo" href="index.html"></a>
+    <a class="page-footer__logo" href="index.html">
+      <span>Мишка</span>
+      <svg width="102" height="34" role="img">
+        <title>Мишка</title>
+        <use xlink:href="#logo-footer"></use>
+      </svg>
+    </a>
     <div class="page-footer__social">
       <a class="page-footer__social-button page-footer__social-button--instagram" href="#">
         <svg width="22" height="21">

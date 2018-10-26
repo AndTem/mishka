@@ -48,7 +48,7 @@ gulp.task("images-opti", () =>
 );
 
 gulp.task("sprite", () =>
-  gulp.src("build/img/**/icon-*.svg")
+  gulp.src(["build/img/**/icon-*.svg", "build/img/logo-footer.svg"])
   .pipe(svgstore({ inlineSvg: true, emptyFills: true }))
   .pipe(rsp.remove({
     properties: [rsp.PROPS_FILL]

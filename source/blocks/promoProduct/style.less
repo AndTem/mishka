@@ -4,7 +4,7 @@
 .promo-product {
   .block-link();
 
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s linear;
 
   &--light {
     background-color: @green--light;
@@ -15,10 +15,7 @@
   }
 
   &:focus {
-    .promo-product__wrapper {
-      padding-top: 5px;
-      padding-bottom: 5px;
-    }
+    margin-top: -5px;
 
     background-color: @promo-product-interaction-background-color;
 
@@ -30,10 +27,7 @@
 
   @media (min-width: @tablet-width) {
     &:hover {
-      .promo-product__wrapper {
-        padding-top: 5px;
-        padding-bottom: 5px;
-      }
+      margin-top: -5px;
 
       background-color: @promo-product-interaction-background-color;
 
