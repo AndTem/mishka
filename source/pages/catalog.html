@@ -71,18 +71,18 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script>document.createElement("picture");</script>
-    <script src="picturefill.js" async></script>
+    <script src="js/picturefill-min.js" async></script>
 
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
     <div style="display:none">{% include '../../build/img/sprite.svg' %}</div>
     {% include '../blocks/modal/index.html' %}
-    {% include '../blocks/pageHeader/index.html' with { class: 'page-catalog__header' } %}
-    {% include '../blocks/mainNav/index.html' %}
+    {% include '../blocks/pageHeader/index.html' %}
     <main class="page page-catalog">
       {% include '../blocks/sectionName/index.html' with {
-          class: 'page-catalog__section-name page__section page__section-name', name: 'Каталог товаров'
+          class: 'page-catalog__section-name page__section',
+          name: 'Каталог товаров'
         }
       %}
       <div class="page__wrapper">
@@ -118,6 +118,6 @@
       </div>
     </main>
     {% include '../blocks/pageFooter/index.html' %}
-    <script src="js/menu.js" type="text/javascript"></script>
+    <script src="js/menu-min.js"></script>
   </body>
 </html>

@@ -16,15 +16,15 @@
 
   text-transform: uppercase;
 
-  &:focus {
-    background-color: @black--light;
-    color: fade(@white, 70%);
-  }
-
   @media (min-width: @tablet-width) {
     &:hover {
       background-color: @black--light;
       color: @white;
     }
+  }
+
+  &:focus {
+    background-color: @black--light;
+    color: fade(@white, 70%);
   }
 }

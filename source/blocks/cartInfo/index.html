@@ -1,6 +1,9 @@
 {% block content %}
 <a class="{{ class }} cart-info" href="#openModal">
-  {% include '../cartAddButton/index.html' with { class: 'cart-info__cart-add-button' } %}
+  <svg class="cart-info__add-button" width="21" height="18" role="img">
+    <title>Корзина</title>
+    <use xlink:href="#icon-cart"></use>
+  </svg>
   <span class="cart-info__content">Корзина: пока пуста</span>
 </a>
 {% endblock %}

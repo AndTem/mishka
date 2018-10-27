@@ -1,9 +1,4 @@
-@page-header-mobile-height: 79px;
-@page-header-tablet-height: 125px;
-
-.page-header {
-  height: @page-header-mobile-height;
-}
+@page-header-tablet-height: 88px;
 
 .page-header__wrapper {
   .wrapper(@mobile-width);
@@ -15,33 +10,14 @@
   padding: 22px @mobile-page-side-padding;
 }
 
-.page-header__base-content-container {
-  box-shadow: 0 1px 0 0 @grey--light, inset 0 1px 0 0 @grey--light;
-}
-
-.page-header__optional-content-container {
-  display: none;
-}
-
-.page-header__logo-container {
-  margin-left: 116px - @mobile-page-side-padding;
-}
-
-.page-header__search-button {
-  display: none;
-
-  width: 82px;
-
-  border-left: 1px solid @grey--light;
-  border-right: 1px solid @grey--light;
-}
-
 .page-header__logo {
+  .block-link();
   .interaction-opacity();
 
-  display: block;
   width: 86px;
   height: 35px;
+  margin-left: 86px;
+  margin-right: 67px;
 
   color: transparent;
 
@@ -49,146 +25,49 @@
   background-size: 100% 100%;
 }
 
-.page-header__cart-info,
-.page-header__catalog-link-container,
-.page-header__content-container--left, {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .page-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    height: @page-header-tablet-height;
-  }
-
-  .page-header__base-content-container {
-    height: 88px;
-  }
-
-  .page-header__wrapper,
-  .page-header__optional-content-container {
-    .wrapper(@tablet-width);
-
-    padding: 0 @tablet-page-side-padding;
-  }
-
-  .page-header__wrapper {
-    justify-content: flex-start;
-
-    height: 100%;
-  }
-
-  .page-header__optional-content-container {
-    display: flex;
-    justify-content: space-between;
-
-    z-index: 1;
-  }
-
-  .page-header__optional-content {
-    display: flex;
-  }
-
-  .page-header__optional-link,
-  .page-header__delivery {
-    .block-link();
-    .interaction-opacity();
-  }
-
-  .page-header__optional-link {
-    .title();
-
-    font-size: 15px;
-
-    &--right {
-      margin-left: 37px;
-    }
-  }
-
-  .page-header__delivery {
-    font-weight: normal;
-  }
-
-  .page-header__logo-container {
-    display: flex;
-    align-items: center;
-
-    width: 321px;
-    margin-left: 0;
-  }
-
-  .page-header__logo {
-    width: 112px;
-    height: 46px;
-
-    background-image: url("../img/logo-tablet.svg");
   }
 
   .page-header__content-container {
     height: 100%;
 
-    &--right {
-      display: flex;
-      flex-grow: 1;
-    }
+    border-bottom: 1px solid @grey--light;
   }
 
-  .page-header__search-button {
-    .icon-interaction();
+  .page-header__wrapper {
+    .wrapper(@tablet-width);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
 
-    box-sizing: border-box;
+    padding: 0 @tablet-page-side-padding;
 
-    svg {
-      width: 18px;
-      height: 18px;
+    height: @page-header-tablet-height;
+  }
 
-      fill: @icon-color--grey;
-    }
+  .page-header__logo {
+    width: 112px;
+    height: 46px;
+    margin: 0;
+
+    background-image: url("../img/logo-tablet.svg");
   }
 
   .page-header__menu-button {
     display: none;
   }
-
-  .page-header__cart-info {
-    display: flex;
-    flex-grow: 1;
-
-    padding-left: 31px;
-  }
-
-  .page-header__section-link {
-    .block-link();
-    .title;
-
-    font-size: 17px;
-  }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper,
-  .page-header__optional-content-container {
+  .page-header__wrapper {
     .wrapper(@desktop-width);
 
+    justify-content: center;
+
     padding: 0 @desktop-page-side-padding;
-  }
-
-  .page-header__optional-link {
-    &--right {
-      margin-left: 60px;
-    }
-  }
-
-  .page-header__logo-container {
-    width: auto;
-    margin: 0 101px 0 75px;
   }
 
   .page-header__logo {
@@ -196,36 +75,5 @@
     height: 72px;
 
     background-image: url("../img/logo-desktop.svg");
-  }
-
-  .page-header__content-container--left {
-    display: flex;
-  }
-
-  .page-header__section-link {
-    display: flex;
-    align-items: center;
-
-    height: 100%;
-
-    transition: color 0.15s ease;
-
-    &:first-child {
-      padding-right: 33px;
-
-      border-right: 1px solid @grey--light;
-    }
-
-    &:last-child {
-      padding-left: 35px;
-    }
-
-    &:hover {
-      color: fade(@black, 60%);
-    }
-
-    &:focus {
-      color: fade(@black, 30%);
-    }
   }
 }

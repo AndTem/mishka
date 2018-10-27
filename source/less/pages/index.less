@@ -2,7 +2,7 @@
 @reviews-underscore-mobile-margin-top: 45px;
 @mobile-underscore-height: 6px;
 
-@goods-of-week-underscore-tablet-margin-top: 53px;
+@goods-of-week-underscore-tablet-margin-top: 25px;
 @reviews-underscore-tablet-margin-top: 69px;
 @tablet-underscore-height: 15px;
 @tablet-underscore-fill-height: 24px;
@@ -13,11 +13,11 @@
 @desktop-underscore-fill-height: 34px;
 
 .page-main__promo {
-  margin-bottom: 34px;
+  margin-bottom: 31px;
 }
 
 .page-main__goods-of-week {
-  margin-bottom: 76px;
+  margin-bottom: 71px;
 
   &::after {
     .after-underscore-line(@mobile-underscore-height, @mobile-page-side-padding, @goods-of-week-underscore-mobile-margin-top);
@@ -29,7 +29,7 @@
 }
 
 .page-main__reviews {
-  margin-bottom: 95px;
+  margin-bottom: 87px;
 
   &::after {
     .after-underscore-line(@mobile-underscore-height, @mobile-page-side-padding, @reviews-underscore-mobile-margin-top);
@@ -41,16 +41,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-main__header .page-header__optional-content--main {
-    display: flex;
-  }
-
-  .page-main__header .page-header__optional-content--no-main {
-    display: none;
-  }
-
   .page-main__promo {
-    margin-top: -36px;
+    margin-top: -38px;
     margin-bottom: 55px;
 
     &::after {
@@ -59,7 +51,7 @@
   }
 
   .page-main__goods-of-week {
-    margin-bottom: 128px;
+    margin-bottom: 102px;
 
     &::after {
       .after-underscore-line(@tablet-underscore-height, @tablet-page-side-padding, @goods-of-week-underscore-tablet-margin-top);
@@ -67,13 +59,13 @@
   }
 
   .page-main__about-us {
-    margin-bottom: 82px;
+    margin-bottom: 86px;
   }
 
   .page-main__reviews {
     width: calc(100% + @tablet-page-side-padding * 2);
     margin-left: -@tablet-page-side-padding;
-    margin-bottom: 156px;
+    margin-bottom: 123px;
 
     &::after {
       .after-underscore-line(@tablet-underscore-height, @tablet-page-side-padding, @reviews-underscore-tablet-margin-top);
@@ -87,12 +79,32 @@
   .page-main__contacts {
     margin-bottom: 57px;
   }
+
+  .page-main__header .page-header__logo {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .page-main__footer .page-footer__logo {
+    &:hover svg {
+      fill: black;
+    }
+
+    &:focus svg {
+      fill: black;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__promo {
-    margin-top: -36px;
-    margin-bottom: 134px;
+    margin-top: -38px;
+    margin-bottom: 125px;
 
     &::after {
       .after-underscore-line--fill(@desktop-underscore-fill-height);
@@ -100,7 +112,7 @@
   }
 
   .page-main__goods-of-week {
-    margin-bottom: 166px;
+    margin-bottom: 154px;
 
     &::after {
       .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @goods-of-week-underscore-desktop-margin-top);
@@ -118,7 +130,7 @@
 
   .page-main__reviews {
     width: @desktop-width - @desktop-page-side-padding * 2;
-    margin: 0 auto 223px;
+    margin: 0 auto 217px;
 
     &::after {
       .after-underscore-line(@desktop-underscore-height, @desktop-page-side-padding, @reviews-underscore-desktop-margin-top);

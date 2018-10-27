@@ -1,5 +1,5 @@
 .section-name {
-  padding: 76px 0;
+  padding: 73px 0;
   background-color: @section-name-background;
 }
 
@@ -15,10 +15,20 @@
 
 @media (min-width: @tablet-width) {
   .section-name {
-    padding: 104px 0 105px 0;
+    padding: 92px 0 75px;
   }
 
   .section-name__wrapper {
     .wrapper(@tablet-width);
+  }
+
+  .page-order__description {
+    margin-bottom: 7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section-name {
+    padding-bottom: 100px;
   }
 }
