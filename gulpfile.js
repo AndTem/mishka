@@ -19,7 +19,11 @@ const htmlmin = require('gulp-htmlmin');
 const minify = require('gulp-minify');
 const server = require("browser-sync").create();
 
-const htmlbeautifyOptions = { indent_size: 2 };
+const spriteSvg = [
+  "build/img/**/icon-*.svg",
+  "build/img/logo-footer.svg",
+  "build/img/logo-htmlacademy.svg"
+];
 
 gulp.task("css", () => {
   return gulp.src("source/less/style.less")
@@ -48,7 +52,7 @@ gulp.task("images-opti", () =>
 );
 
 gulp.task("sprite", () =>
-  gulp.src(["build/img/**/icon-*.svg", "build/img/logo-footer.svg"])
+  gulp.src(spriteSvg)
   .pipe(svgstore({ inlineSvg: true, emptyFills: true }))
   .pipe(rsp.remove({
     properties: [rsp.PROPS_FILL]
