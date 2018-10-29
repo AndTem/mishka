@@ -11,8 +11,8 @@
 
 .page-footer__social {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap;
 
   padding: 24px 62px 28px 57px;
 
@@ -22,6 +22,12 @@
 .page-footer__social-button {
   .block-link();
   .icon-interaction();
+
+  margin-right: 40px;
+
+  &:nth-child(3n + 3) {
+    margin-right: 0;
+  }
 
   &--instagram {
     width: 22px;
@@ -60,7 +66,7 @@
 
     width: 102px;
     height: 34px;
-    margin-right: 159px;
+    margin-right: 157px;
 
     span {
       .visualy-hidden()
