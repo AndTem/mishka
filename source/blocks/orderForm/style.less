@@ -60,7 +60,7 @@
 
 .order-form__checkbox,
 .order-form__radio-button {
-  display: none;
+  .visualy-hidden();
 }
 
 .order-form__text-label,
@@ -108,8 +108,6 @@
 }
 
 .order-form__radio-button:checked + .order-form__custom-radio-button {
-  border-color: fade(@black--light, 30%);
-
   &::before {
     content: "";
     display: block;
@@ -125,6 +123,10 @@
   }
 }
 
+.order-form__radio-button:focus + .order-form__custom-radio-button {
+  border-color: fade(@black--light, 30%);
+}
+
 .order-form__radio-button:disabled + .order-form__custom-radio-button,
 .order-form__checkbox:disabled + .order-form__custom-checkbox {
   cursor: not-allowed;
@@ -133,12 +135,14 @@
 }
 
 .order-form__checkbox:checked + .order-form__custom-checkbox {
-  border-color: fade(@black--light, 30%);
-
   background-image: url("../img/icon-tick.svg");
   background-size: 22px 16px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.order-form__checkbox:focus + .order-form__custom-checkbox {
+  border-color: fade(@black--light, 30%);
 }
 
 .order-form__text-label-container {
@@ -291,8 +295,21 @@
     }
   }
 
-  .order-form__label-container:last-child {
-    margin-bottom: 0;
+  .order-form__label-container {
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      .order-form__checkbox:checked + .order-form__custom-checkbox,
+      .order-form__radio-button:checked + .order-form__custom-radio-button,
+      .order-form__custom-radio-button,
+      .order-form__custom-checkbox {
+        border-color: @checked-color;
+      }
+    }
   }
 
   .order-form__custom-radio-button {
@@ -347,13 +364,6 @@
     svg {
       fill: @checked-color;
     }
-  }
-
-  .order-form__checkbox:checked + .order-form__custom-checkbox:hover,
-  .order-form__radio-button:checked + .order-form__custom-radio-button:hover,
-  .order-form__custom-radio-button:hover,
-  .order-form__custom-checkbox:hover {
-    border-color: @checked-color;
   }
 
   .order-form__fieldset--type-contact .order-form__contact-input-container,
