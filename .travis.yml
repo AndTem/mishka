@@ -15,5 +15,6 @@ scripts:
   - npm run build
 
 deploy:
+  provider: pages
   keep-history: true
   target-branch: master
