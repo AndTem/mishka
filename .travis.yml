@@ -16,5 +16,4 @@ scripts:
 
 deploy:
   keep-history: true
-  local-dir: build
   target-branch: master
