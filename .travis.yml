@@ -5,3 +5,16 @@ node_js:
 
 notifications:
   email: false
+
+cache:
+  directories:
+    - "node_modules"
+
+scripts:
+  - npm install
+  - npm run build
+
+deploy:
+  keep-history: true
+  local-dir: build
+  target-branch: master
