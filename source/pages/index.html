@@ -1,0 +1,56 @@
+{% set screenResolution = {
+    mobileWidth: '320px',
+    tabletWidth: '768px',
+    desktopWidth: '1150px'
+  }
+%}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script>document.createElement("picture");</script>
+    <script src="js/picturefill-min.js" async></script>
+
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body class="page-main">
+    <div style="display:none">{% include '../../build/img/sprite.svg' %}</div>
+    {% include '../blocks/modal/index.html' %}
+    {% include '../blocks/pageHeader/index.html' with { class: 'page-main__header' } %}
+    <main class="page">
+      {% include '../blocks/promo/index.html' with {
+          class: 'page-main__promo page__section page__section--no-padding'
+        }
+      %}
+      <div class="page__wrapper">
+        {% include '../blocks/goodsOfWeek/index.html' with {
+            class: 'page-main__goods-of-week page__section'
+          }
+        %}
+        {% include '../blocks/aboutUs/index.html' with {
+            class: 'page-main__about-us page__section'
+          }
+        %}
+        {% include '../blocks/reviews/index.html' with {
+            class: 'page-main__reviews page__section'
+          }
+        %}
+        {% include '../blocks/contacts/index.html' with {
+            class: 'page-main__contacts page__section'
+          }
+        %}
+      </div>
+    </main>
+    {% include '../blocks/pageFooter/index.html' with { class: 'page-main__footer' } %}
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ADemyFsBAAAA_CIgCAMA5OZrZmYanPW01Lq3qwShtvxtrz4AAAAAAAAAAAAGGZiTMny3GE4PcPYawQln6Km2gw==&lang=ru_RU"></script>
+    <script src="js/maps-min.js"></script>
+    <script src="js/menu-min.js"></script>
+  </body>
+</html>

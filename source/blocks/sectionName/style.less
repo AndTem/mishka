@@ -1,0 +1,34 @@
+.section-name {
+  padding: 73px 0;
+  background-color: @section-name-background;
+}
+
+.section-name__wrapper {
+  .wrapper(@mobile-width);
+}
+
+.section-name__title {
+  .main-title();
+
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .section-name {
+    padding: 92px 0 75px;
+  }
+
+  .section-name__wrapper {
+    .wrapper(@tablet-width);
+  }
+
+  .page-order__description {
+    margin-bottom: 7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section-name {
+    padding-bottom: 100px;
+  }
+}

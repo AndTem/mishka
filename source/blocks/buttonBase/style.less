@@ -1,0 +1,30 @@
+.button-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  padding: 20px;
+  height: @button-heigth;
+
+  font-size: @button-font-size;
+  font-weight: @button-font-weight;
+  text-align: center;
+
+  border: 2px solid @black--light;
+  outline: none;
+
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      background-color: @black--light;
+      color: @white;
+    }
+  }
+
+  &:focus {
+    background-color: @black--light;
+    color: fade(@white, 70%);
+  }
+}

@@ -1,0 +1,53 @@
+{% block content %}
+<div class="product">
+  <a class="product__image-container" href="{{ link }}">
+    <picture>
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.desktopWidth }})"
+        srcset="{{ srcDesktopImageWebp }}.webp 1x,
+                {{ srcDesktopImageRetinaWebp }}.webp 2x"
+      >
+      <source
+        media="(min-width: {{ screenResolution.desktopWidth }})"
+        srcset="{{ srcDesktopImage }} 1x,
+                {{ srcDesktopImageRetina }} 2x"
+      >
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.tabletWidth }})"
+        srcset="{{ srcTabletImageWebp }}.webp 1x,
+                {{ srcTabletImageRetinaWebp }}.webp 2x"
+      >
+      <source
+        media="(min-width: {{ screenResolution.tabletWidth }})"
+        srcset="{{ srcTabletImage }} 1x,
+                {{ srcTabletImageRetina }} 2x"
+      >
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.mobileWidth }})"
+        srcset="{{ srcMobileImageWebp }}.webp 1x,
+                {{ srcMobileImageRetinaWebp }}.webp 2x"
+      >
+      <img
+        class="product__image"
+        src="{{ srcMobileImage }}"
+        srcset="{{ srcMobileImageRetina }} 500w"
+        sizes="(min-width: {{ screenResolution.desktopWidth }}) 316px, (min-width: {{ screenResolution.tabletWidth }}) 334px, (min-width: {{ screenResolution.mobileWidth }}) 250px"
+        alt="{{ name }}"
+      >
+    </picture>
+  </a>
+  <div class="product__info-container">
+    <div class="product__description">
+      <a class="product__name" href="{{ link }}">{{ name }}</a>
+      <span class="product__parameters">{{ parameters }}</span>
+    </div>
+    <div class="product__about-order">
+      <span class="product__price">{{ price }} руб.</span>
+      {% include '../cartAddButton/index.html' with { class: 'product__cart-add-button' } %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+@product-price-font-weight: bold;
+
+.product {
+  transition: box-shadow 0.2s ease;
+
+  &:focus {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.product__image-container {
+  .block-link();
+
+  height: 195px;
+}
+
+.product__image {
+  height: 100%;
+}
+
+.product__info-container {
+  padding: 28px 28px 30px;
+
+  border: 1px solid @grey--light;
+}
+
+.product__description {
+  padding-bottom: 22px;
+}
+
+.product__name {
+  .block-link();
+  .title();
+  .interaction-opacity();
+
+  margin-bottom: 7px;
+
+  font-size: 17px;
+}
+
+.product__parameters {
+  display: block;
+
+  font-size: 13px;
+}
+
+.product__about-order {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 20px;
+
+  border-top: 1px solid @grey--light;
+}
+
+.product__price {
+  color: @black;
+  font-weight: @product-price-font-weight;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .product {
+    display: flex;
+
+    height: 334px;
+  }
+
+  .product__name {
+    margin-bottom: 4px;
+  }
+
+  .product__image-container {
+    height: 100%;
+    width: 334px;
+  }
+
+  .product__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    padding: 28px 31px 24px 28px;
+  }
+
+  .product__about-order {
+    padding-top: 22px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product__price,
+  .product__name {
+    line-height: 24px;
+  }
+
+  .product__name {
+    max-width: 235px;
+
+    font-size: 20px;
+  }
+
+  .product__parameters {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .product__image-container {
+    height: 462px;
+  }
+
+  .product__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    padding: 25px 25px 30px;
+  }
+
+  .product__name {
+    margin-bottom: 5px;
+  }
+
+  .product__description {
+    padding-bottom: 14px;
+  }
+}

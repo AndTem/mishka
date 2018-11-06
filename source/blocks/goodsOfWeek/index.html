@@ -1,0 +1,68 @@
+{% block content %}
+<section class="{{ class }} goods-of-week">
+  <header class="goods-of-week__header">
+    <h2 class="goods-of-week__product-name">Вязаные корзинки</h2>
+    <span class="goods-of-week__title">товар недели</span>
+  </header>
+  <div class="goods-of-week__content">
+    <p class="goods-of-week__description">
+        Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+    </p>
+    <ul class="goods-of-week__parameters-list">
+      <li class="goods-of-week__parameter">
+        <span class="goods-of-week__parameter-name">Цвет:</span>
+        <span class="goods-of-week__parameter-value">«Тиффани»/серый</span>
+      </li>
+      <li class="goods-of-week__parameter">
+        <span class="goods-of-week__parameter-name">Диаметр:</span>
+        <span class="goods-of-week__parameter-value">25 см</span>
+      </li>
+      <li class="goods-of-week__parameter">
+        <span class="goods-of-week__parameter-name">Высота:</span>
+        <span class="goods-of-week__parameter-value">15 см</span>
+      </li>
+    </ul>
+    <picture class="goods-of-week__product-image-container">
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.desktopWidth }})"
+        srcset="img/triple-set-desktop@1x.webp 1x,
+                img/triple-set-desktop@2x.webp 2x"
+      >
+      <source
+        media="(min-width: {{ screenResolution.desktopWidth }})"
+        srcset="img/triple-set-desktop@1x.jpg 1x,
+                img/triple-set-desktop@2x.jpg 2x"
+      >
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.tabletWidth }})"
+        srcset="img/triple-set-tablet@1x.webp 1x,
+                img/triple-set-tablet@2x.webp 2x"
+      >
+      <source
+        media="(min-width: {{ screenResolution.tabletWidth }})"
+        srcset="img/triple-set-tablet@1x.jpg 1x,
+                img/triple-set-tablet@2x.jpg 2x"
+      >
+      <source
+        type="image/webp"
+        media="(min-width: {{ screenResolution.mobileWidth }})"
+        srcset="img/triple-set-mobile@1x.webp 1x,
+                img/triple-set-mobile@2x.webp 2x"
+      >
+      <img
+        class="goods-of-week__product-image"
+        src="img/triple-set-mobile@1x.jpg"
+        srcset="img/triple-set-mobile@2x.jpg 520w"
+        sizes="(min-width: {{ screenResolution.desktopWidth }}) 525px, (min-width: {{ screenResolution.tabletWidth }}) 333px, (min-width: {{ screenResolution.mobileWidth }}) 260px"
+        alt="Вязаные корзинки"
+      >
+    </picture>
+    <span class="goods-of-week__price">Цена: 990 руб.</span>
+    <a class="goods-of-week__to-order-button button-base" href="#openModal">
+      Заказать
+    </a>
+  </div>
+</section>
+{% endblock %}

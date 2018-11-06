@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - "8.12"
+
+notifications:
+  email: false
+
+cache:
+  directories:
+    - "node_modules"
+
+scripts:
+  - npm install
+  - npm run build
+
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  skip-cleanup: true
+  keep-history: true
+  target-branch: gh-pages
+  on:
+    branch: master

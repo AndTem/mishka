@@ -1,0 +1,45 @@
+{% set advantages = [
+    {
+      svgImage: 'icon-feature-flower',
+      width: 32,
+      height: 37,
+      description: 'Экологически<br> чистые материалы'
+    },
+    {
+      svgImage: 'icon-feature-money',
+      width: 47,
+      height: 27,
+      description: 'Скандинавский стиль<br> по российской цене'
+    },
+    {
+      svgImage: 'icon-feature-heart',
+      width: 34,
+      height: 27,
+      description: 'Увеличивает лайки<br> на фотографиях'
+    },
+    {
+      svgImage: 'icon-feature-ball',
+      width: 35,
+      height: 34,
+      description: 'Связано вручную с<br> любовью и умилением'
+    },
+    {
+      svgImage: 'icon-feature-rocket',
+      width: 55,
+      height: 23,
+      description: 'Поддержка отечественного производителя'
+    },
+    {
+      svgImage: 'icon-feature-gift',
+      width: 33,
+      height: 32,
+      description: 'Поставляется в<br> подарочной упаковке'
+    }
+  ]
+%}
+{% block content %}
+<section class="{{ class }} about-us">
+  <h2 class="about-us__title">Коротко о нас:</h2>
+  {% include '../advantages/index.html' with { advantages: advantages, className: 'about-us__advantages' } %}
+</section>
+{% endblock %}

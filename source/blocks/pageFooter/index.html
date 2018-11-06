@@ -1,0 +1,38 @@
+{% block content %}
+<footer class="{{ class }} page-footer">
+  <div class="page-footer__wrapper">
+    <a class="page-footer__logo" href="index.html">
+      <span>Мишка</span>
+      <svg width="102" height="34" role="img">
+        <title>Мишка</title>
+        <use xlink:href="#logo-footer"></use>
+      </svg>
+    </a>
+    <div class="page-footer__social">
+      <a class="page-footer__social-button page-footer__social-button--instagram" href="#">
+        <svg width="22" height="21">
+          <use xlink:href="#icon-insta"></use>
+        </svg>
+      </a>
+      <a class="page-footer__social-button page-footer__social-button--facebook" href="#">
+        <svg width="15" height="28">
+          <use xlink:href="#icon-fb"></use>
+        </svg>
+      </a>
+      <a class="page-footer__social-button page-footer__social-button--twitter" href="#">
+        <svg width="23" height="20">
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+      </a>
+    </div>
+    <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <h2 class="copyright__info">Разработано</h2>
+      <div class="copyright__logo">
+        <svg width="27px" height="34px">
+          <use xlink:href="#logo-htmlacademy"></use>
+        </svg>
+      </div>
+    </a>
+  </div>
+</footer>
+{% endblock %}

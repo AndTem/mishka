@@ -1,0 +1,126 @@
+{% set screenResolution = {
+    mobileWidth: '320px',
+    tabletWidth: '768px',
+    desktopWidth: '1150px'
+  }
+%}
+{% set products = [
+    {
+      link: '#',
+      srcMobileImageWebp: 'img/photo-hare-mobile@1x',
+      srcMobileImage: 'img/photo-hare-mobile@1x.jpg',
+      srcMobileImageRetinaWebp: 'img/photo-hare-mobile@2x',
+      srcMobileImageRetina: 'img/photo-hare-mobile@2x.jpg',
+      srcTabletImageWebp: 'img/photo-hare-tablet@1x',
+      srcTabletImage: 'img/photo-hare-tablet@1x.jpg',
+      srcTabletImageRetinaWebp: 'img/photo-hare-tablet@2x',
+      srcTabletImageRetina: 'img/photo-hare-tablet@2x.jpg',
+      srcDesktopImageWebp: 'img/photo-hare-desktop@1x',
+      srcDesktopImage: 'img/photo-hare-desktop@1x.jpg',
+      srcDesktopImageRetinaWebp: 'img/photo-hare-desktop@2x',
+      srcDesktopImageRetina: 'img/photo-hare-desktop@2x.jpg',
+      name: 'Зайчик-попрыгайчик',
+      parameters: 'Рост 30 см, вес 200 г',
+      price: '1 200'
+    },
+    {
+      link: '#',
+      srcMobileImageWebp: 'img/photo-bowl-mobile@1x',
+      srcMobileImage: 'img/photo-bowl-mobile@1x.jpg',
+      srcMobileImageRetinaWebp: 'img/photo-bowl-mobile@2x',
+      srcMobileImageRetina: 'img/photo-bowl-mobile@2x.jpg',
+      srcTabletImageWebp: 'img/photo-bowl-tablet@1x',
+      srcTabletImage: 'img/photo-bowl-tablet@1x.jpg',
+      srcTabletImageRetinaWebp: 'img/photo-bowl-tablet@2x',
+      srcTabletImageRetina: 'img/photo-bowl-tablet@2x.jpg',
+      srcDesktopImageWebp: 'img/photo-bowl-desktop@1x',
+      srcDesktopImage: 'img/photo-bowl-desktop@1x.jpg',
+      srcDesktopImageRetinaWebp: 'img/photo-bowl-desktop@2x',
+      srcDesktopImageRetina: 'img/photo-bowl-desktop@2x.jpg',
+      name: 'Корзинка для белья',
+      parameters: 'Диаметр 15 см, высота 10 см',
+      price: '690'
+    },
+    {
+      link: '#',
+      srcMobileImageWebp: 'img/photo-toys-mobile@1x',
+      srcMobileImage: 'img/photo-toys-mobile@1x.jpg',
+      srcMobileImageRetinaWebp: 'img/photo-toys-mobile@2x',
+      srcMobileImageRetina: 'img/photo-toys-mobile@2x.jpg',
+      srcTabletImageWebp: 'img/photo-toys-tablet@1x',
+      srcTabletImage: 'img/photo-toys-tablet@1x.jpg',
+      srcTabletImageRetinaWebp: 'img/photo-toys-tablet@2x',
+      srcTabletImageRetina: 'img/photo-toys-tablet@2x.jpg',
+      srcDesktopImageWebp: 'img/photo-toys-desktop@1x',
+      srcDesktopImage: 'img/photo-toys-desktop@1x.jpg',
+      srcDesktopImageRetinaWebp: 'img/photo-toys-desktop@2x',
+      srcDesktopImageRetina: 'img/photo-toys-desktop@2x.jpg',
+      name: 'Большая корзинка для игрушек',
+      parameters: 'Диаметр 30 см, высота 30 см',
+      price: '1 500'
+    }
+  ]
+%}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script>document.createElement("picture");</script>
+    <script src="js/picturefill-min.js" async></script>
+
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <div style="display:none">{% include '../../build/img/sprite.svg' %}</div>
+    {% include '../blocks/modal/index.html' %}
+    {% include '../blocks/pageHeader/index.html' %}
+    <main class="page page-catalog">
+      {% include '../blocks/sectionName/index.html' with {
+          class: 'page-catalog__section-name page__section',
+          name: 'Каталог товаров'
+        }
+      %}
+      <div class="page__wrapper">
+        <ul class="page-catalog__catalog-list page__section">
+          {% for product in products %}
+            <li class="page-catalog__catalog-item">
+              {% include '../blocks/product/index.html' with {
+                  link: product.link,
+                  srcMobileImageWebp: product.srcMobileImageWebp,
+                  srcMobileImage: product.srcMobileImage,
+                  srcMobileImageRetinaWebp: product.srcMobileImageRetinaWebp,
+                  srcMobileImageRetina: product.srcMobileImageRetina,
+                  srcTabletImageWebp: product.srcTabletImageWebp,
+                  srcTabletImage: product.srcTabletImage,
+                  srcTabletImageRetinaWebp: product.srcTabletImageRetinaWebp,
+                  srcTabletImageRetina: product.srcTabletImageRetina,
+                  srcDesktopImageWebp: product.srcDesktopImageWebp,
+                  srcDesktopImage: product.srcDesktopImage,
+                  srcDesktopImageRetinaWebp: product.srcDesktopImageRetinaWebp,
+                  srcDesktopImageRetina: product.srcDesktopImageRetina,
+                  name: product.name,
+                  parameters: product.parameters,
+                  price: product.price
+                }
+              %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% include '../blocks/productionProcess/index.html' with {
+            className: 'page-catalog__product-proccess page__section'
+          }
+        %}
+      </div>
+    </main>
+    {% include '../blocks/pageFooter/index.html' %}
+    <script src="js/menu-min.js"></script>
+  </body>
+</html>
