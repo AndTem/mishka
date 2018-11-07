@@ -12,7 +12,6 @@ cache:
 
 script:
   - npm install
-  - git add -f --all build/
   - npm run build
 
 deploy:
