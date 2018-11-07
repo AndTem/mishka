@@ -10,7 +10,7 @@ cache:
   directories:
     - "node_modules"
 
-scripts:
+script:
   - npm install
   - git add -f --all build/
   - npm run build
