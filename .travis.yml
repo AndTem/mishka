@@ -12,8 +12,8 @@ cache:
 
 scripts:
   - npm install
+  - git add -f --all build/
   - npm run build
-  - rm -rf $HOME/.gitignore
 
 deploy:
   provider: pages
