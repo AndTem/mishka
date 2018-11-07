@@ -1,0 +1,1 @@
+function initMaps(){new ymaps.Map("map",{center:[55.76,37.64],zoom:7}).geoObjects.add(new ymaps.Placemark([55.76,37.64]))}ymaps.ready(initMaps);
